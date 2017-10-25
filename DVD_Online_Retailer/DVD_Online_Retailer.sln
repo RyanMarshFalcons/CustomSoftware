@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVD_Online_Retailer", "DVD_Online_Retailer\DVD_Online_Retailer.csproj", "{596253CE-CBDF-479F-9D83-97E77D1621E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUp", "StartUp\StartUp.csproj", "{36E8952C-5110-4DB0-8488-D07D85D438EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{86CA4AB3-6B34-4D69-AEF6-AF16E36F8C3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{596253CE-CBDF-479F-9D83-97E77D1621E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{596253CE-CBDF-479F-9D83-97E77D1621E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{596253CE-CBDF-479F-9D83-97E77D1621E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{596253CE-CBDF-479F-9D83-97E77D1621E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36E8952C-5110-4DB0-8488-D07D85D438EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36E8952C-5110-4DB0-8488-D07D85D438EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36E8952C-5110-4DB0-8488-D07D85D438EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36E8952C-5110-4DB0-8488-D07D85D438EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86CA4AB3-6B34-4D69-AEF6-AF16E36F8C3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86CA4AB3-6B34-4D69-AEF6-AF16E36F8C3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86CA4AB3-6B34-4D69-AEF6-AF16E36F8C3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86CA4AB3-6B34-4D69-AEF6-AF16E36F8C3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
