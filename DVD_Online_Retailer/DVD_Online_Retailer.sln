@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVD_Online_Retailer", "DVD_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUp", "StartUp\StartUp.csproj", "{36E8952C-5110-4DB0-8488-D07D85D438EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{86CA4AB3-6B34-4D69-AEF6-AF16E36F8C3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsForEmployees", "WindowsFormsApplication1\FormsForEmployees.csproj", "{86CA4AB3-6B34-4D69-AEF6-AF16E36F8C3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

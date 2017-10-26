@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DVD_Online_Retailer
 {
     public enum ShippingMethod { Ground, FirstClass, TwoDay, Overnight};
-    public enum ShippingStatus { BackOrdered, NotYetShipped, Shipped, Delivered, Lost};
+    public enum ShippingStatus { NotYetShipped, Shipped, Delivered, Lost, BackOrdered};
     public class Order
     {
         public int OrderNumber { get; set; }

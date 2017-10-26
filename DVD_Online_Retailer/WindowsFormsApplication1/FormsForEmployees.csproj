@@ -46,16 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="OrderEntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="OrderEntryForm.Designer.cs">
+      <DependentUpon>OrderEntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderStatusForm.Designer.cs">
+      <DependentUpon>OrderStatusForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="OrderEntryForm.resx">
+      <DependentUpon>OrderEntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderStatusForm.resx">
+      <DependentUpon>OrderStatusForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,6 +87,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DVD_Online_Retailer\DVD_Online_Retailer.csproj">
+      <Project>{596253ce-cbdf-479f-9d83-97e77d1621e2}</Project>
+      <Name>DVD_Online_Retailer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

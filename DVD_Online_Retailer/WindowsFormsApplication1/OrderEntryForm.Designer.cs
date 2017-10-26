@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.SubmitButton = new System.Windows.Forms.Button();
-            this.FirstNameLebel = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.FirstNameLabel = new System.Windows.Forms.Label();
+            this.LastNameTextBox = new System.Windows.Forms.RichTextBox();
             this.LastNameLabel = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.PhoneNumberTextBox = new System.Windows.Forms.RichTextBox();
+            this.EmailAddressTextBox = new System.Windows.Forms.RichTextBox();
+            this.MailingAddressTextBox = new System.Windows.Forms.RichTextBox();
             this.PhoneNumberLabel = new System.Windows.Forms.Label();
             this.EmailAddressLabel = new System.Windows.Forms.Label();
             this.MailingAddressLabel = new System.Windows.Forms.Label();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.BillingAddressTextBox = new System.Windows.Forms.RichTextBox();
             this.BillingAddressLabel = new System.Windows.Forms.Label();
             this.CreditCardListBox = new System.Windows.Forms.ListBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.CreditCardNumberLabel = new System.Windows.Forms.Label();
             this.SecurityCodeLabel = new System.Windows.Forms.Label();
             this.CreditCardCompnayLabel = new System.Windows.Forms.Label();
             this.ShippingMethodListBox = new System.Windows.Forms.ListBox();
             this.ShippingMethodLabel = new System.Windows.Forms.Label();
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox8 = new System.Windows.Forms.RichTextBox();
+            this.FirstNameTextBox = new System.Windows.Forms.RichTextBox();
+            this.DVDIDNumberTextBox = new System.Windows.Forms.RichTextBox();
+            this.QuantityTextBox = new System.Windows.Forms.RichTextBox();
             this.DVDIDLabel = new System.Windows.Forms.Label();
             this.QuantityLabel = new System.Windows.Forms.Label();
             this.AddDVDButton = new System.Windows.Forms.Button();
+            this.CreditCardNumberTextBox = new System.Windows.Forms.RichTextBox();
+            this.SecurityCodeTextBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // SubmitButton
@@ -65,23 +65,24 @@
             this.SubmitButton.TabIndex = 0;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = false;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
-            // FirstNameLebel
+            // FirstNameLabel
             // 
-            this.FirstNameLebel.AutoSize = true;
-            this.FirstNameLebel.Location = new System.Drawing.Point(12, 21);
-            this.FirstNameLebel.Name = "FirstNameLebel";
-            this.FirstNameLebel.Size = new System.Drawing.Size(57, 13);
-            this.FirstNameLebel.TabIndex = 2;
-            this.FirstNameLebel.Text = "First Name";
+            this.FirstNameLabel.AutoSize = true;
+            this.FirstNameLabel.Location = new System.Drawing.Point(12, 21);
+            this.FirstNameLabel.Name = "FirstNameLabel";
+            this.FirstNameLabel.Size = new System.Drawing.Size(57, 13);
+            this.FirstNameLabel.TabIndex = 2;
+            this.FirstNameLabel.Text = "First Name";
             // 
-            // richTextBox1
+            // LastNameTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(15, 93);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(226, 20);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.LastNameTextBox.Location = new System.Drawing.Point(15, 93);
+            this.LastNameTextBox.Name = "LastNameTextBox";
+            this.LastNameTextBox.Size = new System.Drawing.Size(226, 20);
+            this.LastNameTextBox.TabIndex = 3;
+            this.LastNameTextBox.Text = "";
             // 
             // LastNameLabel
             // 
@@ -92,29 +93,29 @@
             this.LastNameLabel.TabIndex = 4;
             this.LastNameLabel.Text = "Last Name";
             // 
-            // richTextBox2
+            // PhoneNumberTextBox
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(15, 148);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(226, 20);
-            this.richTextBox2.TabIndex = 5;
-            this.richTextBox2.Text = "";
+            this.PhoneNumberTextBox.Location = new System.Drawing.Point(15, 148);
+            this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
+            this.PhoneNumberTextBox.Size = new System.Drawing.Size(226, 20);
+            this.PhoneNumberTextBox.TabIndex = 5;
+            this.PhoneNumberTextBox.Text = "";
             // 
-            // richTextBox3
+            // EmailAddressTextBox
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(16, 211);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(225, 24);
-            this.richTextBox3.TabIndex = 6;
-            this.richTextBox3.Text = "";
+            this.EmailAddressTextBox.Location = new System.Drawing.Point(16, 211);
+            this.EmailAddressTextBox.Name = "EmailAddressTextBox";
+            this.EmailAddressTextBox.Size = new System.Drawing.Size(225, 24);
+            this.EmailAddressTextBox.TabIndex = 6;
+            this.EmailAddressTextBox.Text = "";
             // 
-            // richTextBox4
+            // MailingAddressTextBox
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(16, 272);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(225, 22);
-            this.richTextBox4.TabIndex = 7;
-            this.richTextBox4.Text = "";
+            this.MailingAddressTextBox.Location = new System.Drawing.Point(16, 272);
+            this.MailingAddressTextBox.Name = "MailingAddressTextBox";
+            this.MailingAddressTextBox.Size = new System.Drawing.Size(225, 22);
+            this.MailingAddressTextBox.TabIndex = 7;
+            this.MailingAddressTextBox.Text = "";
             // 
             // PhoneNumberLabel
             // 
@@ -143,13 +144,13 @@
             this.MailingAddressLabel.TabIndex = 10;
             this.MailingAddressLabel.Text = "Mailing Address";
             // 
-            // richTextBox5
+            // BillingAddressTextBox
             // 
-            this.richTextBox5.Location = new System.Drawing.Point(16, 325);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(225, 25);
-            this.richTextBox5.TabIndex = 11;
-            this.richTextBox5.Text = "";
+            this.BillingAddressTextBox.Location = new System.Drawing.Point(16, 325);
+            this.BillingAddressTextBox.Name = "BillingAddressTextBox";
+            this.BillingAddressTextBox.Size = new System.Drawing.Size(225, 25);
+            this.BillingAddressTextBox.TabIndex = 11;
+            this.BillingAddressTextBox.Text = "";
             // 
             // BillingAddressLabel
             // 
@@ -168,20 +169,6 @@
             this.CreditCardListBox.Size = new System.Drawing.Size(244, 82);
             this.CreditCardListBox.TabIndex = 13;
             this.CreditCardListBox.Tag = "";
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(508, 148);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(244, 20);
-            this.maskedTextBox2.TabIndex = 14;
-            // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(508, 199);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(244, 20);
-            this.maskedTextBox3.TabIndex = 15;
             // 
             // CreditCardNumberLabel
             // 
@@ -227,29 +214,29 @@
             this.ShippingMethodLabel.TabIndex = 20;
             this.ShippingMethodLabel.Text = "Shipping Method";
             // 
-            // richTextBox6
+            // FirstNameTextBox
             // 
-            this.richTextBox6.Location = new System.Drawing.Point(13, 38);
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(228, 24);
-            this.richTextBox6.TabIndex = 21;
-            this.richTextBox6.Text = "";
+            this.FirstNameTextBox.Location = new System.Drawing.Point(13, 38);
+            this.FirstNameTextBox.Name = "FirstNameTextBox";
+            this.FirstNameTextBox.Size = new System.Drawing.Size(228, 24);
+            this.FirstNameTextBox.TabIndex = 21;
+            this.FirstNameTextBox.Text = "";
             // 
-            // richTextBox7
+            // DVDIDNumberTextBox
             // 
-            this.richTextBox7.Location = new System.Drawing.Point(15, 452);
-            this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(173, 23);
-            this.richTextBox7.TabIndex = 22;
-            this.richTextBox7.Text = "";
+            this.DVDIDNumberTextBox.Location = new System.Drawing.Point(15, 452);
+            this.DVDIDNumberTextBox.Name = "DVDIDNumberTextBox";
+            this.DVDIDNumberTextBox.Size = new System.Drawing.Size(173, 23);
+            this.DVDIDNumberTextBox.TabIndex = 22;
+            this.DVDIDNumberTextBox.Text = "";
             // 
-            // richTextBox8
+            // QuantityTextBox
             // 
-            this.richTextBox8.Location = new System.Drawing.Point(195, 452);
-            this.richTextBox8.Name = "richTextBox8";
-            this.richTextBox8.Size = new System.Drawing.Size(46, 23);
-            this.richTextBox8.TabIndex = 23;
-            this.richTextBox8.Text = "";
+            this.QuantityTextBox.Location = new System.Drawing.Point(195, 452);
+            this.QuantityTextBox.Name = "QuantityTextBox";
+            this.QuantityTextBox.Size = new System.Drawing.Size(46, 23);
+            this.QuantityTextBox.TabIndex = 23;
+            this.QuantityTextBox.Text = "";
             // 
             // DVDIDLabel
             // 
@@ -279,37 +266,53 @@
             this.AddDVDButton.Text = "Add DVD";
             this.AddDVDButton.UseVisualStyleBackColor = false;
             // 
+            // CreditCardNumberTextBox
+            // 
+            this.CreditCardNumberTextBox.Location = new System.Drawing.Point(511, 145);
+            this.CreditCardNumberTextBox.Name = "CreditCardNumberTextBox";
+            this.CreditCardNumberTextBox.Size = new System.Drawing.Size(241, 23);
+            this.CreditCardNumberTextBox.TabIndex = 27;
+            this.CreditCardNumberTextBox.Text = "";
+            // 
+            // SecurityCodeTextBox
+            // 
+            this.SecurityCodeTextBox.Location = new System.Drawing.Point(511, 200);
+            this.SecurityCodeTextBox.Name = "SecurityCodeTextBox";
+            this.SecurityCodeTextBox.Size = new System.Drawing.Size(241, 21);
+            this.SecurityCodeTextBox.TabIndex = 28;
+            this.SecurityCodeTextBox.Text = "";
+            // 
             // OrderEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(792, 508);
+            this.Controls.Add(this.SecurityCodeTextBox);
+            this.Controls.Add(this.CreditCardNumberTextBox);
             this.Controls.Add(this.AddDVDButton);
             this.Controls.Add(this.QuantityLabel);
             this.Controls.Add(this.DVDIDLabel);
-            this.Controls.Add(this.richTextBox8);
-            this.Controls.Add(this.richTextBox7);
-            this.Controls.Add(this.richTextBox6);
+            this.Controls.Add(this.QuantityTextBox);
+            this.Controls.Add(this.DVDIDNumberTextBox);
+            this.Controls.Add(this.FirstNameTextBox);
             this.Controls.Add(this.ShippingMethodLabel);
             this.Controls.Add(this.ShippingMethodListBox);
             this.Controls.Add(this.CreditCardCompnayLabel);
             this.Controls.Add(this.SecurityCodeLabel);
             this.Controls.Add(this.CreditCardNumberLabel);
-            this.Controls.Add(this.maskedTextBox3);
-            this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.CreditCardListBox);
             this.Controls.Add(this.BillingAddressLabel);
-            this.Controls.Add(this.richTextBox5);
+            this.Controls.Add(this.BillingAddressTextBox);
             this.Controls.Add(this.MailingAddressLabel);
             this.Controls.Add(this.EmailAddressLabel);
             this.Controls.Add(this.PhoneNumberLabel);
-            this.Controls.Add(this.richTextBox4);
-            this.Controls.Add(this.richTextBox3);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.MailingAddressTextBox);
+            this.Controls.Add(this.EmailAddressTextBox);
+            this.Controls.Add(this.PhoneNumberTextBox);
             this.Controls.Add(this.LastNameLabel);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.FirstNameLebel);
+            this.Controls.Add(this.LastNameTextBox);
+            this.Controls.Add(this.FirstNameLabel);
             this.Controls.Add(this.SubmitButton);
             this.Name = "OrderEntryForm";
             this.Text = "Order Entry Form";
@@ -322,31 +325,31 @@
         #endregion
 
         private System.Windows.Forms.Button SubmitButton;
-        private System.Windows.Forms.Label FirstNameLebel;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label FirstNameLabel;
+        private System.Windows.Forms.RichTextBox LastNameTextBox;
         private System.Windows.Forms.Label LastNameLabel;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox PhoneNumberTextBox;
+        private System.Windows.Forms.RichTextBox EmailAddressTextBox;
+        private System.Windows.Forms.RichTextBox MailingAddressTextBox;
         private System.Windows.Forms.Label PhoneNumberLabel;
         private System.Windows.Forms.Label EmailAddressLabel;
         private System.Windows.Forms.Label MailingAddressLabel;
-        private System.Windows.Forms.RichTextBox richTextBox5;
+        private System.Windows.Forms.RichTextBox BillingAddressTextBox;
         private System.Windows.Forms.Label BillingAddressLabel;
         private System.Windows.Forms.ListBox CreditCardListBox;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.Label CreditCardNumberLabel;
         private System.Windows.Forms.Label SecurityCodeLabel;
         private System.Windows.Forms.Label CreditCardCompnayLabel;
         private System.Windows.Forms.ListBox ShippingMethodListBox;
         private System.Windows.Forms.Label ShippingMethodLabel;
-        private System.Windows.Forms.RichTextBox richTextBox6;
-        private System.Windows.Forms.RichTextBox richTextBox7;
-        private System.Windows.Forms.RichTextBox richTextBox8;
+        private System.Windows.Forms.RichTextBox FirstNameTextBox;
+        private System.Windows.Forms.RichTextBox DVDIDNumberTextBox;
+        private System.Windows.Forms.RichTextBox QuantityTextBox;
         private System.Windows.Forms.Label DVDIDLabel;
         private System.Windows.Forms.Label QuantityLabel;
         private System.Windows.Forms.Button AddDVDButton;
+        private System.Windows.Forms.RichTextBox CreditCardNumberTextBox;
+        private System.Windows.Forms.RichTextBox SecurityCodeTextBox;
     }
 }
 
