@@ -1,0 +1,12 @@
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Store\bin\Debug\Dvd.Store.dll.config
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Store\bin\Debug\Dvd.Store.dll
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Store\bin\Debug\Dvd.Store.pdb
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Store\bin\Debug\Dvd.Data.dll
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Store\bin\Debug\EntityFramework.dll
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Store\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Store\bin\Debug\Dvd.Data.pdb
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Store\bin\Debug\EntityFramework.xml
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Store\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Store\obj\Debug\Dvd.Store.csprojResolveAssemblyReference.cache
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Store\obj\Debug\Dvd.Store.dll
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Store\obj\Debug\Dvd.Store.pdb

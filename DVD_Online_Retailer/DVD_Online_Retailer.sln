@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVD_Online_Retailer", "DVD_Online_Retailer\DVD_Online_Retailer.csproj", "{596253CE-CBDF-479F-9D83-97E77D1621E2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartUp", "StartUp\StartUp.csproj", "{36E8952C-5110-4DB0-8488-D07D85D438EC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsForEmployees", "WindowsFormsApplication1\FormsForEmployees.csproj", "{86CA4AB3-6B34-4D69-AEF6-AF16E36F8C3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dvd.Data", "Dvd.Data\Dvd.Data.csproj", "{B706C9E0-F1DB-4984-A041-11F070DA6493}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dvd.Business", "Dvd.Business\Dvd.Business.csproj", "{7C532D31-29F2-45AA-A24C-4CF40AA29AB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dvd.Store", "Dvd.Store\Dvd.Store.csproj", "{3713C461-611B-4462-9F5B-0203E02B81D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{596253CE-CBDF-479F-9D83-97E77D1621E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{596253CE-CBDF-479F-9D83-97E77D1621E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{596253CE-CBDF-479F-9D83-97E77D1621E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{596253CE-CBDF-479F-9D83-97E77D1621E2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36E8952C-5110-4DB0-8488-D07D85D438EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36E8952C-5110-4DB0-8488-D07D85D438EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36E8952C-5110-4DB0-8488-D07D85D438EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36E8952C-5110-4DB0-8488-D07D85D438EC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{86CA4AB3-6B34-4D69-AEF6-AF16E36F8C3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{86CA4AB3-6B34-4D69-AEF6-AF16E36F8C3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86CA4AB3-6B34-4D69-AEF6-AF16E36F8C3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86CA4AB3-6B34-4D69-AEF6-AF16E36F8C3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B706C9E0-F1DB-4984-A041-11F070DA6493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B706C9E0-F1DB-4984-A041-11F070DA6493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B706C9E0-F1DB-4984-A041-11F070DA6493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B706C9E0-F1DB-4984-A041-11F070DA6493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C532D31-29F2-45AA-A24C-4CF40AA29AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C532D31-29F2-45AA-A24C-4CF40AA29AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C532D31-29F2-45AA-A24C-4CF40AA29AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C532D31-29F2-45AA-A24C-4CF40AA29AB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3713C461-611B-4462-9F5B-0203E02B81D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3713C461-611B-4462-9F5B-0203E02B81D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3713C461-611B-4462-9F5B-0203E02B81D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3713C461-611B-4462-9F5B-0203E02B81D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

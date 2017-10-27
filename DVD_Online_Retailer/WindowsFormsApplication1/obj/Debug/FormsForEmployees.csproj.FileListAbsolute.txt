@@ -1,9 +1,7 @@
 C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
 C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\bin\Debug\DVD_Online_Retailer.dll
 C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\bin\Debug\EntityFramework.dll
-C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\bin\Debug\DVD_Online_Retailer.pdb
 C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\bin\Debug\EntityFramework.xml
 C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\obj\Debug\FormsForEmployees.csprojResolveAssemblyReference.cache
 C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.OrderEntryForm.resources
@@ -12,3 +10,9 @@ C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplicat
 C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\obj\Debug\FormsForEmployees.csproj.GenerateResource.Cache
 C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\bin\Debug\Dvd.Data.dll
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\bin\Debug\Dvd.Data.pdb
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\bin\Debug\Dvd.Business.dll
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\bin\Debug\Dvd.Business.pdb
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\bin\Debug\Dvd.Store.dll
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\bin\Debug\Dvd.Store.pdb

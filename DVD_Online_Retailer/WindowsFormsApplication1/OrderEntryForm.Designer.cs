@@ -54,6 +54,8 @@
             this.AddDVDButton = new System.Windows.Forms.Button();
             this.CreditCardNumberTextBox = new System.Windows.Forms.RichTextBox();
             this.SecurityCodeTextBox = new System.Windows.Forms.RichTextBox();
+            this.comboBoxCreditCard = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SubmitButton
@@ -282,12 +284,33 @@
             this.SecurityCodeTextBox.TabIndex = 28;
             this.SecurityCodeTextBox.Text = "";
             // 
+            // comboBoxCreditCard
+            // 
+            this.comboBoxCreditCard.FormattingEnabled = true;
+            this.comboBoxCreditCard.Location = new System.Drawing.Point(508, 345);
+            this.comboBoxCreditCard.Name = "comboBoxCreditCard";
+            this.comboBoxCreditCard.Size = new System.Drawing.Size(244, 21);
+            this.comboBoxCreditCard.TabIndex = 29;
+            this.comboBoxCreditCard.SelectedIndexChanged += new System.EventHandler(this.comboBoxCreditCard_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(434, 452);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 35);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Show Message";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // OrderEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(792, 508);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.comboBoxCreditCard);
             this.Controls.Add(this.SecurityCodeTextBox);
             this.Controls.Add(this.CreditCardNumberTextBox);
             this.Controls.Add(this.AddDVDButton);
@@ -350,6 +373,8 @@
         private System.Windows.Forms.Button AddDVDButton;
         private System.Windows.Forms.RichTextBox CreditCardNumberTextBox;
         private System.Windows.Forms.RichTextBox SecurityCodeTextBox;
+        private System.Windows.Forms.ComboBox comboBoxCreditCard;
+        private System.Windows.Forms.Button button1;
     }
 }
 

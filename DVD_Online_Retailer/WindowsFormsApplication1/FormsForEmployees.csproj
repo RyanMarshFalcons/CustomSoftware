@@ -89,9 +89,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DVD_Online_Retailer\DVD_Online_Retailer.csproj">
-      <Project>{596253ce-cbdf-479f-9d83-97e77d1621e2}</Project>
-      <Name>DVD_Online_Retailer</Name>
+    <ProjectReference Include="..\Dvd.Business\Dvd.Business.csproj">
+      <Project>{7c532d31-29f2-45aa-a24c-4cf40aa29ab5}</Project>
+      <Name>Dvd.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dvd.Data\Dvd.Data.csproj">
+      <Project>{b706c9e0-f1db-4984-a041-11f070da6493}</Project>
+      <Name>Dvd.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
