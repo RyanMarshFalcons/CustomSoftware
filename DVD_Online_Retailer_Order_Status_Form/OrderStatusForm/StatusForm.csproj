@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{86CA4AB3-6B34-4D69-AEF6-AF16E36F8C3F}</ProjectGuid>
+    <ProjectGuid>{F936784B-D006-428B-802D-0C20766EEE1F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WindowsFormsApplication1</RootNamespace>
-    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <RootNamespace>OrderStatusForm</RootNamespace>
+    <AssemblyName>OrderStatusForm</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OrderEntryForm.cs">
+    <Compile Include="OrderStatusForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderEntryForm.Designer.cs">
-      <DependentUpon>OrderEntryForm.cs</DependentUpon>
+    <Compile Include="OrderStatusForm.Designer.cs">
+      <DependentUpon>OrderStatusForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="OrderEntryForm.resx">
-      <DependentUpon>OrderEntryForm.cs</DependentUpon>
+    <EmbeddedResource Include="OrderStatusForm.resx">
+      <DependentUpon>OrderStatusForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,16 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Dvd.Business\Dvd.Business.csproj">
-      <Project>{7c532d31-29f2-45aa-a24c-4cf40aa29ab5}</Project>
-      <Name>Dvd.Business</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Dvd.Data\Dvd.Data.csproj">
-      <Project>{b706c9e0-f1db-4984-a041-11f070da6493}</Project>
-      <Name>Dvd.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

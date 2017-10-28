@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{86CA4AB3-6B34-4D69-AEF6-AF16E36F8C3F}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <ProjectGuid>{4F5A84CF-21C1-423C-A40E-A1E05DC6258B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WindowsFormsApplication1</RootNamespace>
-    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <RootNamespace>TestDataLayer</RootNamespace>
+    <AssemblyName>TestDataLayer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -39,54 +39,24 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OrderEntryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OrderEntryForm.Designer.cs">
-      <DependentUpon>OrderEntryForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="OrderEntryForm.resx">
-      <DependentUpon>OrderEntryForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dvd.Business\Dvd.Business.csproj">
-      <Project>{7c532d31-29f2-45aa-a24c-4cf40aa29ab5}</Project>
-      <Name>Dvd.Business</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Dvd.Data\Dvd.Data.csproj">
       <Project>{b706c9e0-f1db-4984-a041-11f070da6493}</Project>
       <Name>Dvd.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dvd.Store\Dvd.Store.csproj">
+      <Project>{3713c461-611b-4462-9f5b-0203e02b81d8}</Project>
+      <Name>Dvd.Store</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

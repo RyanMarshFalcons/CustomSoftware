@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace WindowsFormsApplication1
+namespace Dvd.UI
 {
     partial class OrderEntryForm
     {
@@ -248,7 +248,6 @@ namespace WindowsFormsApplication1
             // SecurityCodeTextBox
             // 
             this.SecurityCodeTextBox.Location = new System.Drawing.Point(508, 227);
-            this.SecurityCodeTextBox.MaxLength = 3;
             this.SecurityCodeTextBox.Name = "SecurityCodeTextBox";
             this.SecurityCodeTextBox.Size = new System.Drawing.Size(241, 21);
             this.SecurityCodeTextBox.TabIndex = 28;
