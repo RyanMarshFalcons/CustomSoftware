@@ -28,123 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.OrderNumberLabel = new System.Windows.Forms.Label();
-            this.OrderNumberTextBox = new System.Windows.Forms.RichTextBox();
-            this.CustomerNameLabel = new System.Windows.Forms.Label();
-            this.CustomerNameTextBox = new System.Windows.Forms.RichTextBox();
-            this.OrderStatusLabel = new System.Windows.Forms.Label();
-            this.OrderStatusTextBox = new System.Windows.Forms.RichTextBox();
-            this.ShippingAddressLabel = new System.Windows.Forms.Label();
-            this.ShippingAddressTextBox = new System.Windows.Forms.RichTextBox();
-            this.CreditCardIssurerLabel = new System.Windows.Forms.Label();
-            this.CreditCardIssuerTextBox = new System.Windows.Forms.RichTextBox();
-            this.SuspendLayout();
+            OrderNumberLabel = new System.Windows.Forms.Label();
+            OrderNumberTextBox = new System.Windows.Forms.RichTextBox();
+            CustomerNameLabel = new System.Windows.Forms.Label();
+            CustomerNameTextBox = new System.Windows.Forms.RichTextBox();
+            OrderStatusLabel = new System.Windows.Forms.Label();
+            OrderStatusTextBox = new System.Windows.Forms.RichTextBox();
+            ShippingAddressLabel = new System.Windows.Forms.Label();
+            ShippingAddressTextBox = new System.Windows.Forms.RichTextBox();
+            CreditCardIssurerLabel = new System.Windows.Forms.Label();
+            CreditCardIssuerTextBox = new System.Windows.Forms.RichTextBox();
+            SuspendLayout();
             // 
             // OrderNumberLabel
             // 
-            this.OrderNumberLabel.AutoSize = true;
-            this.OrderNumberLabel.Location = new System.Drawing.Point(0, 13);
-            this.OrderNumberLabel.Name = "OrderNumberLabel";
-            this.OrderNumberLabel.Size = new System.Drawing.Size(73, 13);
-            this.OrderNumberLabel.TabIndex = 0;
-            this.OrderNumberLabel.Text = "Order Number";
+            OrderNumberLabel.AutoSize = true;
+            OrderNumberLabel.Location = new System.Drawing.Point(0, 13);
+            OrderNumberLabel.Name = "OrderNumberLabel";
+            OrderNumberLabel.Size = new System.Drawing.Size(73, 13);
+            OrderNumberLabel.TabIndex = 0;
+            OrderNumberLabel.Text = "Order Number";
             // 
             // OrderNumberTextBox
             // 
-            this.OrderNumberTextBox.Location = new System.Drawing.Point(3, 30);
-            this.OrderNumberTextBox.Name = "OrderNumberTextBox";
-            this.OrderNumberTextBox.Size = new System.Drawing.Size(151, 20);
-            this.OrderNumberTextBox.TabIndex = 1;
-            this.OrderNumberTextBox.Text = "";
+            OrderNumberTextBox.Location = new System.Drawing.Point(3, 30);
+            OrderNumberTextBox.Name = "OrderNumberTextBox";
+            OrderNumberTextBox.Size = new System.Drawing.Size(151, 20);
+            OrderNumberTextBox.TabIndex = 1;
+            OrderNumberTextBox.Text = "";
             // 
             // CustomerNameLabel
             // 
-            this.CustomerNameLabel.AutoSize = true;
-            this.CustomerNameLabel.Location = new System.Drawing.Point(0, 123);
-            this.CustomerNameLabel.Name = "CustomerNameLabel";
-            this.CustomerNameLabel.Size = new System.Drawing.Size(82, 13);
-            this.CustomerNameLabel.TabIndex = 2;
-            this.CustomerNameLabel.Text = "Customer Name";
+            CustomerNameLabel.AutoSize = true;
+            CustomerNameLabel.Location = new System.Drawing.Point(0, 123);
+            CustomerNameLabel.Name = "CustomerNameLabel";
+            CustomerNameLabel.Size = new System.Drawing.Size(82, 13);
+            CustomerNameLabel.TabIndex = 2;
+            CustomerNameLabel.Text = "Customer Name";
             // 
             // CustomerNameTextBox
             // 
-            this.CustomerNameTextBox.Location = new System.Drawing.Point(3, 139);
-            this.CustomerNameTextBox.Name = "CustomerNameTextBox";
-            this.CustomerNameTextBox.Size = new System.Drawing.Size(151, 22);
-            this.CustomerNameTextBox.TabIndex = 3;
-            this.CustomerNameTextBox.Text = "";
+            CustomerNameTextBox.Location = new System.Drawing.Point(3, 139);
+            CustomerNameTextBox.Name = "CustomerNameTextBox";
+            CustomerNameTextBox.Size = new System.Drawing.Size(151, 22);
+            CustomerNameTextBox.TabIndex = 3;
+            CustomerNameTextBox.Text = "";
             // 
             // OrderStatusLabel
             // 
-            this.OrderStatusLabel.AutoSize = true;
-            this.OrderStatusLabel.Location = new System.Drawing.Point(3, 67);
-            this.OrderStatusLabel.Name = "OrderStatusLabel";
-            this.OrderStatusLabel.Size = new System.Drawing.Size(66, 13);
-            this.OrderStatusLabel.TabIndex = 4;
-            this.OrderStatusLabel.Text = "Order Status";
+            OrderStatusLabel.AutoSize = true;
+            OrderStatusLabel.Location = new System.Drawing.Point(3, 67);
+            OrderStatusLabel.Name = "OrderStatusLabel";
+            OrderStatusLabel.Size = new System.Drawing.Size(66, 13);
+            OrderStatusLabel.TabIndex = 4;
+            OrderStatusLabel.Text = "Order Status";
             // 
             // OrderStatusTextBox
             // 
-            this.OrderStatusTextBox.Location = new System.Drawing.Point(3, 84);
-            this.OrderStatusTextBox.Name = "OrderStatusTextBox";
-            this.OrderStatusTextBox.Size = new System.Drawing.Size(151, 22);
-            this.OrderStatusTextBox.TabIndex = 5;
-            this.OrderStatusTextBox.Text = "";
+            OrderStatusTextBox.Location = new System.Drawing.Point(3, 84);
+            OrderStatusTextBox.Name = "OrderStatusTextBox";
+            OrderStatusTextBox.Size = new System.Drawing.Size(151, 22);
+            OrderStatusTextBox.TabIndex = 5;
+            OrderStatusTextBox.Text = "";
             // 
             // ShippingAddressLabel
             // 
-            this.ShippingAddressLabel.AutoSize = true;
-            this.ShippingAddressLabel.Location = new System.Drawing.Point(3, 181);
-            this.ShippingAddressLabel.Name = "ShippingAddressLabel";
-            this.ShippingAddressLabel.Size = new System.Drawing.Size(89, 13);
-            this.ShippingAddressLabel.TabIndex = 6;
-            this.ShippingAddressLabel.Text = "Shipping Address";
+            ShippingAddressLabel.AutoSize = true;
+            ShippingAddressLabel.Location = new System.Drawing.Point(3, 181);
+            ShippingAddressLabel.Name = "ShippingAddressLabel";
+            ShippingAddressLabel.Size = new System.Drawing.Size(89, 13);
+            ShippingAddressLabel.TabIndex = 6;
+            ShippingAddressLabel.Text = "Shipping Address";
             // 
             // ShippingAddressTextBox
             // 
-            this.ShippingAddressTextBox.Location = new System.Drawing.Point(3, 198);
-            this.ShippingAddressTextBox.Name = "ShippingAddressTextBox";
-            this.ShippingAddressTextBox.Size = new System.Drawing.Size(151, 23);
-            this.ShippingAddressTextBox.TabIndex = 7;
-            this.ShippingAddressTextBox.Text = "";
+            ShippingAddressTextBox.Location = new System.Drawing.Point(3, 198);
+            ShippingAddressTextBox.Name = "ShippingAddressTextBox";
+            ShippingAddressTextBox.Size = new System.Drawing.Size(151, 23);
+            ShippingAddressTextBox.TabIndex = 7;
+            ShippingAddressTextBox.Text = "";
             // 
             // CreditCardIssurerLabel
             // 
-            this.CreditCardIssurerLabel.AutoSize = true;
-            this.CreditCardIssurerLabel.Location = new System.Drawing.Point(3, 244);
-            this.CreditCardIssurerLabel.Name = "CreditCardIssurerLabel";
-            this.CreditCardIssurerLabel.Size = new System.Drawing.Size(90, 13);
-            this.CreditCardIssurerLabel.TabIndex = 8;
-            this.CreditCardIssurerLabel.Text = "Credit Card Issuer";
+            CreditCardIssurerLabel.AutoSize = true;
+            CreditCardIssurerLabel.Location = new System.Drawing.Point(3, 244);
+            CreditCardIssurerLabel.Name = "CreditCardIssurerLabel";
+            CreditCardIssurerLabel.Size = new System.Drawing.Size(90, 13);
+            CreditCardIssurerLabel.TabIndex = 8;
+            CreditCardIssurerLabel.Text = "Credit Card Issuer";
             // 
             // CreditCardIssuerTextBox
             // 
-            this.CreditCardIssuerTextBox.Location = new System.Drawing.Point(3, 261);
-            this.CreditCardIssuerTextBox.Name = "CreditCardIssuerTextBox";
-            this.CreditCardIssuerTextBox.Size = new System.Drawing.Size(151, 23);
-            this.CreditCardIssuerTextBox.TabIndex = 9;
-            this.CreditCardIssuerTextBox.Text = "";
+            CreditCardIssuerTextBox.Location = new System.Drawing.Point(3, 261);
+            CreditCardIssuerTextBox.Name = "CreditCardIssuerTextBox";
+            CreditCardIssuerTextBox.Size = new System.Drawing.Size(151, 23);
+            CreditCardIssuerTextBox.TabIndex = 9;
+            CreditCardIssuerTextBox.Text = "";
             // 
             // OrderStatusForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(526, 446);
-            this.Controls.Add(this.CreditCardIssuerTextBox);
-            this.Controls.Add(this.CreditCardIssurerLabel);
-            this.Controls.Add(this.ShippingAddressTextBox);
-            this.Controls.Add(this.ShippingAddressLabel);
-            this.Controls.Add(this.OrderStatusTextBox);
-            this.Controls.Add(this.OrderStatusLabel);
-            this.Controls.Add(this.CustomerNameTextBox);
-            this.Controls.Add(this.CustomerNameLabel);
-            this.Controls.Add(this.OrderNumberTextBox);
-            this.Controls.Add(this.OrderNumberLabel);
-            this.Name = "OrderStatusForm";
-            this.Text = "OrderStatusForm";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.Gray;
+            ClientSize = new System.Drawing.Size(526, 446);
+            Controls.Add(CreditCardIssuerTextBox);
+            Controls.Add(CreditCardIssurerLabel);
+            Controls.Add(ShippingAddressTextBox);
+            Controls.Add(ShippingAddressLabel);
+            Controls.Add(OrderStatusTextBox);
+            Controls.Add(OrderStatusLabel);
+            Controls.Add(CustomerNameTextBox);
+            Controls.Add(CustomerNameLabel);
+            Controls.Add(OrderNumberTextBox);
+            Controls.Add(OrderNumberLabel);
+            Name = "OrderStatusForm";
+            Text = "OrderStatusForm";
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

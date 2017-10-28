@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Dvd.Data.Model
 {
-    class Class1
+    public class DVD_Ordered
     {
+        public int DVD_ID { get; set; }
+        public int Quantity { get; set; }
     }
 }

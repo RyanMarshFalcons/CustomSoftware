@@ -13,13 +13,12 @@ using Dvd.Data.Interfaces;
 
 namespace WindowsFormsApplication1
 {
-    
     public partial class OrderEntryForm : Form
     {
         private Customer FormCustomer = new Customer();
         private Order FormOrder;
-
         IOrderDomain OrderDomain;
+        private List<DVD_Ordered> dvdsOrdered = new List<DVD_Ordered>();
 
         public OrderEntryForm()
         {
@@ -27,39 +26,38 @@ namespace WindowsFormsApplication1
             OrderDomain = new OrderDomain();
         }
 
+        private void OrderEntryForm_Load(object sender, System.EventArgs e)
+        {
+            LoadCreditCards();
+            LoadShippingMethods();
+            FormCustomer = new Customer();
+        }
+
         private void LoadCreditCards()
         {
-            this.comboBoxCreditCard.Items.AddRange(new object[] {
+            CreditCardIssuerComboBox.Items.AddRange(new object[] {
             CreditCardCompany.Visa.ToString(),
             CreditCardCompany.MasterCard.ToString(),
             CreditCardCompany.Chase.ToString(),
             CreditCardCompany.AmericanExpress.ToString(),
             CreditCardCompany.Discover.ToString(),
-            "-Select Credit Card-"
+            "-Select Credit Card Issuer-"
             });
 
-            this.comboBoxCreditCard.SelectedIndex = 5;
+            CreditCardIssuerComboBox.SelectedIndex = 5;
         }
 
-        private void OrderEntryForm_Load(object sender, System.EventArgs e)
+        private void LoadShippingMethods()
         {
-            LoadCreditCards();
-            FormCustomer = new Customer();
-            // Default values for customer if desired.
+            ShippingMethodComboBox.Items.AddRange(new object[] {
+            ShippingMethod.Ground.ToString(),
+            ShippingMethod.FirstClass.ToString(),
+            ShippingMethod.TwoDay.ToString(),
+            ShippingMethod.Overnight.ToString(),
+            "-Select Shipping Method-"
+            });
 
-            //{Visa = 0, MasterCard = 1, Chase = 2, AmericanExpress = 3, Discover = 4 }
-            var creditCardCompanies = new string[] {
-                CreditCardCompany.Visa.ToString(),
-                CreditCardCompany.MasterCard.ToString(),
-                CreditCardCompany.Chase.ToString(),
-                CreditCardCompany.AmericanExpress.ToString(),
-                CreditCardCompany.Discover.ToString()
-            };
-            CreditCardListBox.Items.AddRange(creditCardCompanies);
-
-            var shippingMethods = new string[] { "Ground", "First Class", "Two Day", "Overnight"};
-            ShippingMethodListBox.Items.AddRange(shippingMethods);
-
+            ShippingMethodComboBox.SelectedIndex = 4;
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
@@ -69,32 +67,183 @@ namespace WindowsFormsApplication1
 
         private void ProcessOrderForm()
         {
-            //I need to verify that strings are long enough, security code is an int, and that a card issuer is selected
-            //I also need to make sure that at least one DVD is being ordered
-            LoadCustomerData();
-            LoadOrder();
+            
+            var allFormFieldsValid = true;
 
-            try
+            if (IsEmptyString(FirstNameTextBox.Text))
             {
-                OrderDomain.CreateOrder(FormOrder);
+                FirstNameLabel.ForeColor = Color.Red;
+                allFormFieldsValid = false;
             }
-            catch (Exception ex)
+            else
             {
-                var message = $"A problem happened when submitting the order. {ex.Message}";
-                var caption = "Processing Error";
+                FirstNameLabel.ForeColor = Color.Black;
+            }
+
+            if (IsEmptyString(LastNameTextBox.Text))
+            {
+                LastNameLabel.ForeColor = Color.Red;
+                allFormFieldsValid = false;
+            }
+            else
+            {
+                LastNameLabel.ForeColor = Color.Black;
+            }
+
+            if (IsEmptyString(PhoneNumberTextBox.Text))
+            {
+                PhoneNumberLabel.ForeColor = Color.Red;
+                allFormFieldsValid = false;
+            }
+            else
+            {
+                PhoneNumberLabel.ForeColor = Color.Black;
+            }
+
+            if (IsEmptyString(EmailAddressTextBox.Text))
+            {
+                EmailAddressLabel.ForeColor = Color.Red;
+                allFormFieldsValid = false;
+            }
+            else
+            {
+                EmailAddressLabel.ForeColor = Color.Black;
+            }
+
+            if (IsEmptyString(MailingAddressTextBox.Text))
+            {
+                MailingAddressLabel.ForeColor = Color.Red;
+                allFormFieldsValid = false;
+            }
+            else
+            {
+                MailingAddressLabel.ForeColor = Color.Black;
+            }
+
+            if (IsEmptyString(BillingAddressTextBox.Text))
+            {
+                BillingAddressLabel.ForeColor = Color.Red;
+                allFormFieldsValid = false;
+            }
+            else
+            {
+                BillingAddressLabel.ForeColor = Color.Black;
+            }
+
+            if (IsEmptyString(CreditCardNumberTextBox.Text))
+            {
+                CreditCardNumberLabel.ForeColor = Color.Red;
+                allFormFieldsValid = false;
+            }
+            else
+            {
+                CreditCardNumberLabel.ForeColor = Color.Black;
+            }
+
+            if (!IsThreeDigitInt(SecurityCodeTextBox.Text))
+            {
+                SecurityCodeLabel.ForeColor = Color.Red;
+                allFormFieldsValid = false;
+            }
+            else
+            {
+                SecurityCodeLabel.ForeColor = Color.Black;
+            }
+
+            if (CreditCardIssuerComboBox.SelectedIndex >= 0 && CreditCardIssuerComboBox.SelectedIndex <= 4)
+            {
+                CreditCardIssuerLabel.ForeColor = Color.Black;
+            }
+            else
+            {
+                CreditCardIssuerLabel.ForeColor = Color.Red;
+                allFormFieldsValid = false;
+            }
+
+            if (ShippingMethodComboBox.SelectedIndex >= 0 && ShippingMethodComboBox.SelectedIndex <= 3)
+            {
+                ShippingMethodLabel.ForeColor = Color.Black;
+            }
+            else
+            {
+                ShippingMethodLabel.ForeColor = Color.Red;
+                allFormFieldsValid = false;
+            }
+
+            if (dvdsOrdered.Count == 0)
+            {
+                DVDIDLabel.ForeColor = Color.Red;
+                QuantityLabel.ForeColor = Color.Red;
+                allFormFieldsValid = false;
+            }
+            else
+            {
+                DVDIDLabel.ForeColor = Color.Black;
+                QuantityLabel.ForeColor = Color.Black;
+            }
+
+            if (!allFormFieldsValid)
+            {
+                const string message = "Not all of the required fields were filled out correctly";
+                const string caption = "Unable To Submit Order";
                 var result = MessageBox.Show(message, caption,
                                              MessageBoxButtons.OK,
-                                             MessageBoxIcon.Error);
+                                             MessageBoxIcon.Information);
+            }
+            else
+            {
+                LoadCustomerData();
+                LoadOrder();
+
+                try
+                {
+                    OrderDomain.CreateOrder(FormOrder);
+                }
+                catch (Exception ex)
+                {
+                    var message = $"A problem happened when submitting the order. {ex.Message}";
+                    var caption = "Processing Error";
+                    var result = MessageBox.Show(message, caption,
+                                                 MessageBoxButtons.OK,
+                                                 MessageBoxIcon.Error);
+                }
             }
         }
+
+        private bool IsEmptyString(string userInput)
+        {
+            return userInput.Length == 0;
+        }
+
+        private bool IsThreeDigitInt(string userInput)
+        {
+            return IsThreeDigits(userInput) && IsPositiveInt(userInput);
+        }
+
+        private bool IsThreeDigits(string userInput)
+        {
+            return userInput.Length == 3;
+        }
+
+        private bool IsPositiveInt(string userInput)
+        {
+            var result = 0;
+            if(int.TryParse(userInput, out result))
+            {
+                return result > 0;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        
         private void LoadOrder()
         {
             FormOrder = new Order()
             {
-                //Figure out how to get current highest row number in the orders table to determine order number
-                //OrderNumber = currentHighestOrderNumber + 1;
-                Customer = this.FormCustomer,
-                ShippingMethod = (ShippingMethod)ShippingMethodListBox.SelectedIndex,
+                Customer = FormCustomer,
+                ShippingMethod = (ShippingMethod)ShippingMethodComboBox.SelectedIndex,
                 ShippingStatus = ShippingStatus.NotYetShipped,
                 OrderDate = DateTime.Today
             };
@@ -102,31 +251,45 @@ namespace WindowsFormsApplication1
 
         private void LoadCustomerData()
         {
-            this.FormCustomer.FirstName = FirstNameTextBox.Text;
-            this.FormCustomer.LastName = LastNameTextBox.Text;
-            this.FormCustomer.PhoneNumber = PhoneNumberTextBox.Text;
-            this.FormCustomer.EmailAddress = EmailAddressTextBox.Text;
-            this.FormCustomer.MailingAddress = MailingAddressTextBox.Text;
-            this.FormCustomer.BillingAddress = BillingAddressTextBox.Text;
-            this.FormCustomer.CardIssuer = (CreditCardCompany)this.comboBoxCreditCard.SelectedIndex;
-            this.FormCustomer.CreditCardNumber = CreditCardNumberTextBox.Text;
-            this.FormCustomer.SecurityCode = int.Parse(SecurityCodeTextBox.Text);
+            FormCustomer.FirstName = FirstNameTextBox.Text;
+            FormCustomer.LastName = LastNameTextBox.Text;
+            FormCustomer.PhoneNumber = PhoneNumberTextBox.Text;
+            FormCustomer.EmailAddress = EmailAddressTextBox.Text;
+            FormCustomer.MailingAddress = MailingAddressTextBox.Text;
+            FormCustomer.BillingAddress = BillingAddressTextBox.Text;
+            FormCustomer.CardIssuer = (CreditCardCompany)CreditCardIssuerComboBox.SelectedIndex;
+            FormCustomer.CreditCardNumber = CreditCardNumberTextBox.Text;
+            FormCustomer.SecurityCode = int.Parse(SecurityCodeTextBox.Text);
         }
 
-        private void comboBoxCreditCard_SelectedIndexChanged(object sender, EventArgs e)
+        private void AddDVDButton_Click(object sender, EventArgs e)
         {
-            this.FormCustomer.CardIssuer = (CreditCardCompany)this.comboBoxCreditCard.SelectedIndex;
+            ProcessAddingDVDToOrder();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ProcessAddingDVDToOrder()
         {
-            const string message = "Are you sure that you would like to close the form?";
-            const string caption = "This is a MessageBox";
-            var result = MessageBox.Show(message, caption,
-                                         MessageBoxButtons.YesNoCancel,
-                                         MessageBoxIcon.Information);
+            if (IsValidDVDId(DVDIDNumberTextBox.Text) && IsPositiveInt(QuantityTextBox.Text))
+            {
+                var dvdOrdered = new DVD_Ordered() { DVD_ID = int.Parse(DVDIDNumberTextBox.Text), Quantity = int.Parse(QuantityTextBox.Text) };
+                dvdsOrdered.Add(dvdOrdered);
+                DVDIDLabel.ForeColor = Color.Black;
+                QuantityLabel.ForeColor = Color.Black;
+            }
+            else
+            {
+                const string message = "Invalid DVD ID and Quantity input";
+                const string caption = "Unable To Add DVD To Order";
+                var result = MessageBox.Show(message, caption,
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Information);
+            }
+        }
 
-            
+        //Need to create a table of DVDs with ID numbers and check that it exists
+        private bool IsValidDVDId(string dvdIDtextboxtext)
+        {
+            return true;
         }
     }
 }
