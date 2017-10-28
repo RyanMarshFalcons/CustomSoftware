@@ -14,3 +14,6 @@ C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplicat
 C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\bin\Debug\Dvd.Business.pdb
 C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\bin\Debug\Dvd.Store.dll
 C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\WindowsFormsApplication1\bin\Debug\Dvd.Store.pdb
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer_Order_Form\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer_Order_Form\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer_Order_Form\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
