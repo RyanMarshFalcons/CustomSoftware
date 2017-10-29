@@ -1,9 +1,0 @@
-C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Business\bin\Debug\Dvd.Business.dll
-C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Business\bin\Debug\Dvd.Business.pdb
-C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Business\bin\Debug\Dvd.Data.dll
-C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Business\bin\Debug\Dvd.Data.pdb
-C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Business\obj\Debug\Dvd.Business.dll
-C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Business\obj\Debug\Dvd.Business.pdb
-C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Business\obj\Debug\Dvd.Business.csprojResolveAssemblyReference.cache
-C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Business\bin\Debug\Dvd.Store.dll
-C:\Users\rmars_000\GitHubCustomSoftware\DVD_Online_Retailer\Dvd.Business\bin\Debug\Dvd.Store.pdb
