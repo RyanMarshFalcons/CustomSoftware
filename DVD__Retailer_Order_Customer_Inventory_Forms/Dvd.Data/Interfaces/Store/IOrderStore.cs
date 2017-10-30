@@ -9,12 +9,12 @@ namespace Dvd.Data.Interfaces.Store
 {
     public interface IOrderStore
     {
-        void AddOrder(Order order);
-        void UdpateOrder(Order order);
+        int AddOrder(Order order);
+        int UdpateOrder(Order order);
 
         Order GetOrder(int orderNumber);
 
-        void DeleteOrder(int orderNumber);
+        int DeleteOrder(int orderNumber);
 
         List<Order> GetOrders();
     }

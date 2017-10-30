@@ -7,27 +7,34 @@ using Dvd.Store;
 using Dvd.Data;
 using Dvd.Data.Model;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace TestDataLayer
 {
     static class Program
     {
+        private static CustomerStore _customerStore;
+        private static OrderStore _orderStore;
+
         static void Main()
         {
+            _customerStore = new CustomerStore();
+
             Console.WriteLine("Enter your selection: \n1) Delete Customer\n2) Get Customer\n3) Get Customers\n4) Update Customer\n5) Delete Order\n6) Get Order\n7) Get Orders\n8) Update Order");
             var selection = Console.ReadLine();
-            var customerNumber = 0;
+            var customerID = 0;
+            var orderNumber = 0;
             switch (selection)
             {
                 case "1":
-                    Console.Write("Enter the customer number of the customer you want to delete: ");
-                    customerNumber = int.Parse(Console.ReadLine());
-                    DeleteCustomer(customerNumber);
+                    Console.Write("Enter the customer ID of the customer you want to delete: ");
+                    customerID = int.Parse(Console.ReadLine());
+                    DeleteCustomer(customerID);
                     break;
                 case "2":
-                    Console.Write("Enter the customer number of the customer you want to get: ");
-                    customerNumber = int.Parse(Console.ReadLine());
-                    var customer = GetCustomer(customerNumber);
+                    Console.Write("Enter the customer ID of the customer you want to get: ");
+                    customerID = int.Parse(Console.ReadLine());
+                    var customer = GetCustomer(customerID);
                     Console.WriteLine($"Customer ID: {customer.CustomerId}");
                     Console.WriteLine($"First name: {customer.FirstName}");
                     Console.WriteLine($"Last name: {customer.LastName}");
@@ -64,211 +71,105 @@ namespace TestDataLayer
                     Console.Write("What is the first name of the customer you want to update: ");
                     custUpdate.FirstName = Console.ReadLine();
                     Console.Write("What is the last name of the customer you want to update: ");
-                    custUpdate.FirstName = Console.ReadLine();
+                    custUpdate.LastName = Console.ReadLine();
                     Console.Write("What is the phone number of the customer you want to update: ");
-                    custUpdate.FirstName = Console.ReadLine();
+                    custUpdate.PhoneNumber = Console.ReadLine();
                     Console.Write("What is the email address of the customer you want to update: ");
-                    custUpdate.FirstName = Console.ReadLine();
-                    Console.Write("What is the first name of the customer you want to update: ");
-                    custUpdate.FirstName = Console.ReadLine();
-                    Console.Write("What is the first name of the customer you want to update: ");
-                    custUpdate.FirstName = Console.ReadLine();
-
-
-
-
-
-
+                    custUpdate.EmailAddress = Console.ReadLine();
+                    Console.Write("What is the mailing address of the customer you want to update: ");
+                    custUpdate.MailingAddress = Console.ReadLine();
+                    Console.Write("What is the billing address the customer you want to update: ");
+                    custUpdate.BillingAddress = Console.ReadLine();
+                    Console.Write("What is the ID number of the credit card issuer of the customer you want to update: ");
+                    custUpdate.CardIssuer = (CreditCardCompany)int.Parse(Console.ReadLine());
+                    Console.Write("What is the credit card number of the name of the customer you want to update: ");
+                    custUpdate.CreditCardNumber = Console.ReadLine();
+                    Console.Write("What is the security code of the customer you want to update: ");
+                    custUpdate.SecurityCode = int.Parse(Console.ReadLine());
+                    break;
+                case "5":
+                    Console.Write("Enter the order number of the order you want to delete: ");
+                    orderNumber = int.Parse(Console.ReadLine());
+                    DeleteCustomer(orderNumber);
+                    break;
+                case "6":
+                    Console.Write("Enter the order number of the order you want to get: ");
+                    orderNumber = int.Parse(Console.ReadLine());
+                    var order = GetOrder(orderNumber);
+                    Console.WriteLine($"Order Number: {order.OrderNumber}");
+                    Console.WriteLine($"Customer ID: {order.CustomerId}");
+                    Console.WriteLine($"Shipping Method: {(ShippingMethod)(order.ShippingMethod)}");
+                    Console.WriteLine($"Shipping Status: {(ShippingStatus)(order.ShippingStatus)}");
+                    Console.WriteLine($"Order Date: {order.OrderDate}");
+                    break;
+                case "7":
+                    var orders = GetOrders();
+                    foreach (var ord in orders)
+                    {
+                        Console.WriteLine($"Order Number: {ord.OrderNumber}");
+                        Console.WriteLine($"Customer ID: {ord.CustomerId}");
+                        Console.WriteLine($"Shipping Method: {(ShippingMethod)(ord.ShippingMethod)}");
+                        Console.WriteLine($"Shipping Status: {(ShippingStatus)(ord.ShippingStatus)}");
+                        Console.WriteLine($"Order Date: {ord.OrderDate}");
+                    }
+                    break;
+                case "8":
+                    var ordUpdate = new Order();
+                    Console.Write("What is the order number of the order you want to update: ");
+                    ordUpdate.OrderNumber = int.Parse(Console.ReadLine());
+                    Console.Write("What is the customer ID of the order you want to update: ");
+                    ordUpdate.CustomerId = int.Parse(Console.ReadLine());
+                    Console.Write("What is the shipping method of the order you want to update: ");
+                    ordUpdate.ShippingMethod = (ShippingMethod)(int.Parse(Console.ReadLine()));
+                    Console.Write("What is the shipping status of the order you want to update: ");
+                    ordUpdate.ShippingStatus = (ShippingStatus)(int.Parse(Console.ReadLine()));
+                    Console.Write("What is the order date of the order you want to update: ");
+                    ordUpdate.OrderDate = Convert.ToDateTime(Console.ReadLine());
                     break;
             }
-
             Console.ReadLine();
         }
-        public static void DeleteCustomer(int customerNumber)
-        {
-            var SQL_DELETE = $"DELETE FROM [dbo].[Customer] WHERE CustomerID = {customerNumber} ";
-            using (var conn = DatabaseHelper.GetConnection())
-            {
-                using (SqlCommand cmd = new SqlCommand(SQL_DELETE, conn))
-                {
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
-                }
-            }
-        }
 
-        public static Customer GetCustomer(int CustomerNumber)
+        public static Customer GetCustomer(int customerNumber)
         {
-            var customer = new Customer();
-            var SQL_SELECT = $"SELECT CustomerId, FirstName, LastName, PhoneNumber, EmailAddress, MailingAddress, "
-            + "BillingAddress, CardIssuerId, CreditCardNumber, SecurityCode FROM [dbo].[Customer] WHERE CustomerID = {customerNumber} ";
-            using (var conn = DatabaseHelper.GetConnection())
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(SQL_SELECT, conn);
-                cmd.Parameters.Add(new SqlParameter("@CustomerId", System.Data.SqlDbType.Int));
-                cmd.Parameters.Add(new SqlParameter("@FirstName", System.Data.SqlDbType.VarChar));
-                cmd.Parameters.Add(new SqlParameter("@LastName", System.Data.SqlDbType.VarChar));
-                cmd.Parameters.Add(new SqlParameter("@PhoneNumber", System.Data.SqlDbType.VarChar));
-                cmd.Parameters.Add(new SqlParameter("@EmailAddress", System.Data.SqlDbType.VarChar));
-                cmd.Parameters.Add(new SqlParameter("@MailingAddress", System.Data.SqlDbType.VarChar));
-                cmd.Parameters.Add(new SqlParameter("@BillingAddress", System.Data.SqlDbType.VarChar));
-                cmd.Parameters.Add(new SqlParameter("@CardIssuerId", System.Data.SqlDbType.Int));
-                cmd.Parameters.Add(new SqlParameter("@CreditCardNumber", System.Data.SqlDbType.VarChar));
-                cmd.Parameters.Add(new SqlParameter("@SecurityCode", System.Data.SqlDbType.Int));
-                SqlDataReader rdr = cmd.ExecuteReader();
-                rdr.Read();
-                customer.CustomerId = rdr.GetInt32(0);
-                customer.FirstName = rdr.GetString(1);
-                customer.LastName = rdr.GetString(2);
-                customer.PhoneNumber = rdr.GetString(3);
-                customer.EmailAddress = rdr.GetString(4);
-                customer.MailingAddress = rdr.GetString(5);
-                customer.BillingAddress = rdr.GetString(6);
-                customer.CardIssuer = (CreditCardCompany)rdr.GetInt32(7);
-                customer.CreditCardNumber = rdr.GetString(8);
-                customer.SecurityCode = rdr.GetInt32(9); 
-            }
-            return customer;
+            return _customerStore.GetCustomer(customerNumber);
         }
 
         public static List<Customer> GetCustomers()
         {
-            var customers = new List<Customer>();
-            var customer = new Customer();
-            var SQL_SELECT = "SELECT CustomerId, FirstName, LastName, PhoneNumber, EmailAddress, MailingAddress, "
-            + "BillingAddress, CardIssuerId, CreditCardNumber, SecurityCode FROM [dbo].[Customer]";
-            using (var conn = DatabaseHelper.GetConnection())
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(SQL_SELECT, conn);
-                cmd.Parameters.Add(new SqlParameter("@CustomerId", System.Data.SqlDbType.Int));
-                cmd.Parameters.Add(new SqlParameter("@FirstName", System.Data.SqlDbType.VarChar));
-                cmd.Parameters.Add(new SqlParameter("@LastName", System.Data.SqlDbType.VarChar));
-                cmd.Parameters.Add(new SqlParameter("@PhoneNumber", System.Data.SqlDbType.VarChar));
-                cmd.Parameters.Add(new SqlParameter("@EmailAddress", System.Data.SqlDbType.VarChar));
-                cmd.Parameters.Add(new SqlParameter("@MailingAddress", System.Data.SqlDbType.VarChar));
-                cmd.Parameters.Add(new SqlParameter("@BillingAddress", System.Data.SqlDbType.VarChar));
-                cmd.Parameters.Add(new SqlParameter("@CardIssuerId", System.Data.SqlDbType.Int));
-                cmd.Parameters.Add(new SqlParameter("@CreditCardNumber", System.Data.SqlDbType.VarChar));
-                cmd.Parameters.Add(new SqlParameter("@SecurityCode", System.Data.SqlDbType.Int));
-                SqlDataReader rdr = cmd.ExecuteReader();
-                while (rdr.Read())
-                {
-                    customer.CustomerId = rdr.GetInt32(0);
-                    customer.FirstName = rdr.GetString(1);
-                    customer.LastName = rdr.GetString(2);
-                    customer.PhoneNumber = rdr.GetString(3);
-                    customer.EmailAddress = rdr.GetString(4);
-                    customer.MailingAddress = rdr.GetString(5);
-                    customer.BillingAddress = rdr.GetString(6);
-                    customer.CardIssuer = (CreditCardCompany)rdr.GetInt32(7);
-                    customer.CreditCardNumber = rdr.GetString(8);
-                    customer.SecurityCode = rdr.GetInt32(9);
-                    customers.Add(customer);
-                }
-            }
-            return customers;
+            return _customerStore.GetCustomers();
         }
 
-        public static void UdpateCustomer(Customer Customer)
+        public static void UdpateCustomer(Customer customer)
         {
-            var SQL_UPDATE = "UPDATE [dbo].[Customer] "
-            + "SET FirstName = Customer.FirstName, LastName = Customer.LastName, PhoneNumber = Customer.PhoneNumber, "
-            + "EmailAddress = Customer.EmailAddress, MailingAddress = Customer.MailingAddress, BillingAddress = Customer.BillingAddress, "
-            + "CardIssuerId = Customer.CardIssuerId, CreditCardNumber = Customer.CreditCardNumber, SecurityCode = Customer.SecurityCode "
-            + "WHERE CustomerID = Customer.CustomerID";
-            using (var conn = DatabaseHelper.GetConnection())
-            {
-                using (SqlCommand cmd = new SqlCommand(SQL_UPDATE, conn))
-                {
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
-                }
-            }
+            _customerStore.UdpateCustomer(customer);
+        }
+
+        public static void DeleteCustomer(int customerId)
+        {
+            var rowsAffected = _customerStore.DeleteCustomer(customerId);
+            Console.WriteLine($"There were {rowsAffected} rows deleted.");
         }
 
         public static void DeleteOrder(int orderNumber)
         {
-            var SQL_DELETE = $"DELETE FROM [dbo].[Order] WHERE OrderNumber = {orderNumber} ";
-            using (var conn = DatabaseHelper.GetConnection())
-            {
-                using (SqlCommand cmd = new SqlCommand(SQL_DELETE, conn))
-                {
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
-                }
-            }
+            var rowsAffected = _orderStore.DeleteOrder(orderNumber);
+            Console.WriteLine($"There were {rowsAffected} rows deleted.");
         }
 
         public static Order GetOrder(int orderNumber)
         {
-            var order = new Order();
-            var SQL_SELECT = $"SELECT OrderNumber, CustomerId, ShippingMethod, ShippingStatusId, OrderDate FROM [dbo].[Order] WHERE OrderNumber = {orderNumber} ";
-            using (var conn = DatabaseHelper.GetConnection())
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(SQL_SELECT, conn);
-                cmd.Parameters.Add(new SqlParameter("@OrderNumber", System.Data.SqlDbType.Int));
-                cmd.Parameters.Add(new SqlParameter("@CustomerId", System.Data.SqlDbType.Int));
-                cmd.Parameters.Add(new SqlParameter("@ShippingMethod", System.Data.SqlDbType.Int));
-                cmd.Parameters.Add(new SqlParameter("@ShippingStatusId", System.Data.SqlDbType.Int));
-                cmd.Parameters.Add(new SqlParameter("@OrderDate", System.Data.SqlDbType.DateTime));
-                SqlDataReader rdr = cmd.ExecuteReader();
-                rdr.Read();
-                order.OrderNumber = rdr.GetInt32(0);
-                order.CustomerId = rdr.GetInt32(1);
-                order.ShippingMethod =  (ShippingMethod)rdr.GetInt32(2);
-                order.ShippingStatus = (ShippingStatus)rdr.GetInt32(3);
-            }
-            return order;
+            return _orderStore.GetOrder(orderNumber);
         }
 
         public static List<Order> GetOrders()
         {
-            var order = new Order();
-            var orders = new List<Order>();
-            var SQL_SELECT = $"SELECT OrderNumber, CustomerId, ShippingMethod, ShippingStatusId, OrderDate FROM [dbo].[Order] ";
-            using (var conn = DatabaseHelper.GetConnection())
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(SQL_SELECT, conn);
-                cmd.Parameters.Add(new SqlParameter("@OrderNumber", System.Data.SqlDbType.Int));
-                cmd.Parameters.Add(new SqlParameter("@CustomerId", System.Data.SqlDbType.Int));
-                cmd.Parameters.Add(new SqlParameter("@ShippingMethod", System.Data.SqlDbType.Int));
-                cmd.Parameters.Add(new SqlParameter("@ShippingStatusId", System.Data.SqlDbType.Int));
-                cmd.Parameters.Add(new SqlParameter("@OrderDate", System.Data.SqlDbType.DateTime));
-                SqlDataReader rdr = cmd.ExecuteReader();
-                while (rdr.Read())
-                {
-                    order.OrderNumber = rdr.GetInt32(0);
-                    order.CustomerId = rdr.GetInt32(1);
-                    order.ShippingMethod = (ShippingMethod)rdr.GetInt32(2);
-                    order.ShippingStatus = (ShippingStatus)rdr.GetInt32(3);
-                    orders.Add(order);
-                }
-            }
-            return orders;
+            return _orderStore.GetOrders();
         }
 
         public static void UdpateOrder(Order order)
         {
-            var SQL_UPDATE = "UPDATE [dbo].[Order] "
-            + "SET ShippingMethodId = order.ShippingMethodId, ShippingStatusId = order.ShippingStatudId, "
-            + "OrderDate = order.OrderDate "
-            + "WHERE OrderNumber = order.OrderNumber";
-            using (var conn = DatabaseHelper.GetConnection())
-            {
-                using (SqlCommand cmd = new SqlCommand(SQL_UPDATE, conn))
-                {
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
-                }
-            }
+            _orderStore.UdpateOrder(order);
         }
     }
 }

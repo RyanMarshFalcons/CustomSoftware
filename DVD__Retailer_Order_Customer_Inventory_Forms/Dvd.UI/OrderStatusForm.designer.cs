@@ -45,8 +45,9 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.OrderTotalLabel = new System.Windows.Forms.Label();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.DvdsOrderedComboBox = new System.Windows.Forms.ComboBox();
             this.DvdsOrderedLabel = new System.Windows.Forms.Label();
+            this.DvdsOrderedDataGrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DvdsOrderedDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // EnterOrderNumberLabel
@@ -195,22 +196,22 @@
             this.richTextBox2.TabIndex = 16;
             this.richTextBox2.Text = "";
             // 
-            // DvdsOrderedComboBox
-            // 
-            this.DvdsOrderedComboBox.FormattingEnabled = true;
-            this.DvdsOrderedComboBox.Location = new System.Drawing.Point(486, 127);
-            this.DvdsOrderedComboBox.Name = "DvdsOrderedComboBox";
-            this.DvdsOrderedComboBox.Size = new System.Drawing.Size(206, 21);
-            this.DvdsOrderedComboBox.TabIndex = 17;
-            // 
             // DvdsOrderedLabel
             // 
             this.DvdsOrderedLabel.AutoSize = true;
-            this.DvdsOrderedLabel.Location = new System.Drawing.Point(483, 104);
+            this.DvdsOrderedLabel.Location = new System.Drawing.Point(491, 104);
             this.DvdsOrderedLabel.Name = "DvdsOrderedLabel";
-            this.DvdsOrderedLabel.Size = new System.Drawing.Size(73, 13);
+            this.DvdsOrderedLabel.Size = new System.Drawing.Size(76, 13);
             this.DvdsOrderedLabel.TabIndex = 18;
-            this.DvdsOrderedLabel.Text = "Dvds Ordered";
+            this.DvdsOrderedLabel.Text = "Dvds Ordered:";
+            // 
+            // DvdsOrderedDataGrid
+            // 
+            this.DvdsOrderedDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DvdsOrderedDataGrid.Location = new System.Drawing.Point(353, 120);
+            this.DvdsOrderedDataGrid.Name = "DvdsOrderedDataGrid";
+            this.DvdsOrderedDataGrid.Size = new System.Drawing.Size(365, 355);
+            this.DvdsOrderedDataGrid.TabIndex = 19;
             // 
             // OrderStatusForm
             // 
@@ -218,8 +219,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(730, 487);
+            this.Controls.Add(this.DvdsOrderedDataGrid);
             this.Controls.Add(this.DvdsOrderedLabel);
-            this.Controls.Add(this.DvdsOrderedComboBox);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.OrderTotalLabel);
             this.Controls.Add(this.richTextBox1);
@@ -240,6 +241,7 @@
             this.Name = "OrderStatusForm";
             this.Text = "Order Status Form";
             this.Load += new System.EventHandler(this.OrderStatusForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DvdsOrderedDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,8 +266,8 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label OrderTotalLabel;
         private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.ComboBox DvdsOrderedComboBox;
         private System.Windows.Forms.Label DvdsOrderedLabel;
+        private System.Windows.Forms.DataGridView DvdsOrderedDataGrid;
     }
 }
 

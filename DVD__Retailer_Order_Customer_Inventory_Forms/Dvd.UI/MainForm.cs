@@ -14,6 +14,7 @@ namespace Dvd.UI
     {
         OrderStatusForm orderStatusForm = null;
         OrderEntryForm orderEntryForm = null;
+        AddInventoryForm addInventoryForm = null;
        
 
         public MainForm()
@@ -35,6 +36,13 @@ namespace Dvd.UI
             orderStatusForm.Show();
         }
 
+        private void OpenMdiClientAddInventoryForm()
+        {
+            var addInventoryForm = new AddInventoryForm();
+            addInventoryForm.MdiParent = this;
+            addInventoryForm.Show();
+        }
+
         protected void ShowOrderEntryForm()
         {
             var orderEntryForm = new OrderEntryForm();
@@ -49,6 +57,13 @@ namespace Dvd.UI
             orderStatusForm.Dispose();
         }
 
+        protected void ShowAddInventoryForm()
+        {
+            var addInventoryForm = new AddInventoryForm();
+            addInventoryForm.ShowDialog(this);
+            addInventoryForm.Dispose();
+        }
+
         private void orderFormToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenMdiClientOrderForm();
@@ -57,6 +72,11 @@ namespace Dvd.UI
         private void orderStatusFormToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenMdiClientOrderStatusForm();
+        }
+
+        private void addInventoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenMdiClientAddInventoryForm();
         }
     }
 }

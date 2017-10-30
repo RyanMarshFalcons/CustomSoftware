@@ -30,10 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orderFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orderStatusFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,10 +54,25 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.orderFormToolStripMenuItem,
-            this.orderStatusFormToolStripMenuItem});
+            this.orderStatusFormToolStripMenuItem,
+            this.addInventoryToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
+            // 
+            // orderFormToolStripMenuItem
+            // 
+            this.orderFormToolStripMenuItem.Name = "orderFormToolStripMenuItem";
+            this.orderFormToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.orderFormToolStripMenuItem.Text = "Order Form";
+            this.orderFormToolStripMenuItem.Click += new System.EventHandler(this.orderFormToolStripMenuItem_Click);
+            // 
+            // orderStatusFormToolStripMenuItem
+            // 
+            this.orderStatusFormToolStripMenuItem.Name = "orderStatusFormToolStripMenuItem";
+            this.orderStatusFormToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.orderStatusFormToolStripMenuItem.Text = "Order Status Form";
+            this.orderStatusFormToolStripMenuItem.Click += new System.EventHandler(this.orderStatusFormToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -70,19 +86,12 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // orderFormToolStripMenuItem
+            // addInventoryToolStripMenuItem
             // 
-            this.orderFormToolStripMenuItem.Name = "orderFormToolStripMenuItem";
-            this.orderFormToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.orderFormToolStripMenuItem.Text = "Order Form";
-            this.orderFormToolStripMenuItem.Click += new System.EventHandler(this.orderFormToolStripMenuItem_Click);
-            // 
-            // orderStatusFormToolStripMenuItem
-            // 
-            this.orderStatusFormToolStripMenuItem.Name = "orderStatusFormToolStripMenuItem";
-            this.orderStatusFormToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.orderStatusFormToolStripMenuItem.Text = "Order Status Form";
-            this.orderStatusFormToolStripMenuItem.Click += new System.EventHandler(this.orderStatusFormToolStripMenuItem_Click);
+            this.addInventoryToolStripMenuItem.Name = "addInventoryToolStripMenuItem";
+            this.addInventoryToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.addInventoryToolStripMenuItem.Text = "Add Inventory";
+            this.addInventoryToolStripMenuItem.Click += new System.EventHandler(this.addInventoryToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -108,5 +117,6 @@
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orderStatusFormToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addInventoryToolStripMenuItem;
     }
 }

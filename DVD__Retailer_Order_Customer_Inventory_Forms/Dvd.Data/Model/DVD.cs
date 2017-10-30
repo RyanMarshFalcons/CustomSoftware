@@ -11,8 +11,8 @@ namespace Dvd.Data.Model
     {
         public int DVD_ID { get; set; }
         public string Title { get; set; }
-        public int QuantityInStock { get; set; }
         public MovieGenre Genre { get; set; }
+        public int QuantityInStock { get; set; }
         public decimal SalesPrice { get; set; }
         public decimal PurchasePrice { get; set; }
     }

@@ -9,12 +9,12 @@ namespace Dvd.Data.Interfaces.Store
 {
     public interface ICustomerStore
     {
-        int AddCustomer(Customer Customer);
-        void UdpateCustomer(Customer Customer);
+        int AddCustomer(Customer customer);
+        int UdpateCustomer(Customer customer);
 
-        Customer GetCustomer(int CustomerNumber);
+        Customer GetCustomer(int customerNumber);
 
-        void DeleteCustomer(int CustomerNumber);
+        int DeleteCustomer(int customerNumber);
 
         List<Customer> GetCustomers();
     }
