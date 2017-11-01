@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Dvd.UI
 {
-    public partial class OrderStatusForm : Form
+    public partial class UpdateOrderForm : Form
     {
-        public OrderStatusForm()
+        public UpdateOrderForm()
         {
             InitializeComponent();
-        }
-
-        private void OrderStatusForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

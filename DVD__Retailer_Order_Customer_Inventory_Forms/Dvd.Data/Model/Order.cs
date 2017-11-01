@@ -16,7 +16,9 @@ namespace Dvd.Data.Model
         public ShippingStatus ShippingStatus { get; set; }
         public DateTime OrderDate { get; set; }
         public Customer Customer { get; set; }
-        public List<DVD_Ordered> DVDs_Ordered { get; set; }
+        public List<OrderItem> DVDs_Ordered { get; set; }
         public decimal OrderTotal { get; set; }
+        public bool IsDeleted { get; set; }
+        public List<OrderItem> OrderItems { get; set; }
     }
 }

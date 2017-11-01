@@ -8,14 +8,14 @@ using Dvd.Data.Interfaces;
 
 namespace Dvd.UI
 {
-    public partial class OrderEntryForm : Form
+    public partial class NewOrderForm : Form
     {
         private Customer FormCustomer = new Customer();
         private Order FormOrder;
         IOrderDomain OrderDomain;
-        private List<DVD_Ordered> dvdsOrdered = new List<DVD_Ordered>();
+        private List<OrderItem> dvdsOrdered = new List<OrderItem>();
 
-        public OrderEntryForm()
+        public NewOrderForm()
         {
             InitializeComponent();
             OrderDomain = new OrderDomain();
@@ -240,7 +240,8 @@ namespace Dvd.UI
                 Customer = FormCustomer,
                 ShippingMethod = (ShippingMethod)ShippingMethodComboBox.SelectedIndex,
                 ShippingStatus = ShippingStatus.NotYetShipped,
-                OrderDate = DateTime.Today
+                OrderDate = DateTime.Today,
+                IsDeleted = false
             };
         }
 
@@ -255,6 +256,7 @@ namespace Dvd.UI
             FormCustomer.CardIssuer = (CreditCardCompany)CreditCardIssuerComboBox.SelectedIndex;
             FormCustomer.CreditCardNumber = CreditCardNumberTextBox.Text;
             FormCustomer.SecurityCode = int.Parse(SecurityCodeTextBox.Text);
+            FormCustomer.IsDeleted = false;
         }
 
         private void AddDVDButton_Click(object sender, EventArgs e)
@@ -266,7 +268,7 @@ namespace Dvd.UI
         {
             if (IsValidDVDId(DVDIDTextBox.Text) && IsPositiveInt(QuantityTextBox.Text))
             {
-                var dvdOrdered = new DVD_Ordered() { DVD_ID = int.Parse(DVDIDTextBox.Text), Quantity = int.Parse(QuantityTextBox.Text) };
+                var dvdOrdered = new OrderItem() { DVD_ID = int.Parse(DVDIDTextBox.Text), Quantity = int.Parse(QuantityTextBox.Text) };
                 dvdsOrdered.Add(dvdOrdered);
                 DVDIDLabel.ForeColor = Color.Black;
                 QuantityLabel.ForeColor = Color.Black;

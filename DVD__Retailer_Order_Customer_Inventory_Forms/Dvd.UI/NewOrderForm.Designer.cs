@@ -2,7 +2,7 @@
 
 namespace Dvd.UI
 {
-    partial class OrderEntryForm
+    partial class NewOrderForm
     {
         /// <summary>
         /// Required designer variable.
@@ -304,7 +304,7 @@ namespace Dvd.UI
             this.TotalOrderPriceTextBox.TabIndex = 35;
             this.TotalOrderPriceTextBox.Text = "";
             // 
-            // OrderEntryForm
+            // NewOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -339,8 +339,8 @@ namespace Dvd.UI
             this.Controls.Add(this.FirstNameLabel);
             this.Controls.Add(this.SubmitButton);
             this.ForeColor = System.Drawing.Color.Black;
-            this.Name = "OrderEntryForm";
-            this.Text = "Order Entry Form";
+            this.Name = "NewOrderForm";
+            this.Text = "New Order Form";
             this.Load += new System.EventHandler(this.OrderEntryForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -19,5 +19,6 @@ namespace Dvd.Data.Model
         public CreditCardCompany CardIssuer { get; set; }
         public string CreditCardNumber { get; set; }
         public int SecurityCode { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

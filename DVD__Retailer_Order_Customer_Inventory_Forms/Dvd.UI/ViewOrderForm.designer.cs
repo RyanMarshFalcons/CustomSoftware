@@ -1,6 +1,6 @@
 ﻿namespace Dvd.UI
 {
-    partial class OrderStatusForm
+    partial class ViewOrderForm
     {
         /// <summary>
         /// Required designer variable.
@@ -213,7 +213,7 @@
             this.DvdsOrderedDataGrid.Size = new System.Drawing.Size(365, 355);
             this.DvdsOrderedDataGrid.TabIndex = 19;
             // 
-            // OrderStatusForm
+            // ViewOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -238,8 +238,8 @@
             this.Controls.Add(this.CustomerNameLabel);
             this.Controls.Add(this.EnterOrderNumberTextBox);
             this.Controls.Add(this.EnterOrderNumberLabel);
-            this.Name = "OrderStatusForm";
-            this.Text = "Order Status Form";
+            this.Name = "ViewOrderForm";
+            this.Text = "View Order Form";
             this.Load += new System.EventHandler(this.OrderStatusForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DvdsOrderedDataGrid)).EndInit();
             this.ResumeLayout(false);

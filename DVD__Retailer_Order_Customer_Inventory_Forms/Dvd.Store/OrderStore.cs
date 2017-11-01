@@ -17,15 +17,16 @@ namespace Dvd.Store
 
         private const string SQL_SELECT =
             "SELECT OrderNumber, CustomerId, ShippingMethodId, ShippingStatusId, OrderDate "
-            + "FROM [dbo].[Order] ";
+            + "FROM [dbo].[Order] "
+            + "WHERE IsDeleted = 0 ";
 
         private const string SQL_SELECT_ROW =
-            SQL_SELECT + "WHERE OrderNumber = @OrderNumber ";
+            SQL_SELECT + "AND OrderNumber = @OrderNumber ";
 
         private const string SQL_INSERT = "INSERT INTO [dbo].[Order] "
             + "([CustomerId], [ShippingMethodId], [ShippingStatusId], [OrderDate]) "
             + "VALUES "
-            + "(@CustomerId, @ShippingMethodId, @ShippingStatusId, @OrderDate)";
+            + "(@CustomerId, @ShippingMethodId, @ShippingStatusId, @OrderDate) ";
 
         private const string SQL_UPDATE =
                 "UPDATE [dbo].[Order] "
@@ -52,7 +53,7 @@ namespace Dvd.Store
                     cmd.Parameters.Add("@ShippingMethodId", SqlDbType.Int).Value = (int)order.ShippingMethod;
                     cmd.Parameters.Add("@ShippingStatusId", SqlDbType.Int).Value = (int)order.ShippingStatus;
                     cmd.Parameters.Add("@OrderDate", SqlDbType.DateTime).Value = order.OrderDate;
-
+                    
                     conn.Open();
                     var id = cmd.ExecuteScalar();
                     return Convert.ToInt32(id);
@@ -99,7 +100,7 @@ namespace Dvd.Store
             item.CustomerId = (!rdr.IsDBNull(1)) ? rdr.GetInt32(1) : 0;
             item.ShippingMethod = (!rdr.IsDBNull(2)) ? (ShippingMethod)rdr.GetInt32(2) : 0;
             item.ShippingStatus = (!rdr.IsDBNull(3)) ? (ShippingStatus)rdr.GetInt32(3) : 0;
-            item.OrderDate = (!rdr.IsDBNull(0)) ? (rdr.GetDateTime(0)) : DateTime.MinValue;
+            item.OrderDate = (!rdr.IsDBNull(4)) ? (rdr.GetDateTime(4)) : DateTime.MinValue;
         }
 
         public List<Order> GetOrders()
@@ -131,7 +132,7 @@ namespace Dvd.Store
                     cmd.Parameters.Add("@ShippingMethodId", SqlDbType.Int).Value = (int)order.ShippingMethod;
                     cmd.Parameters.Add("@ShippingStatusId", SqlDbType.Int).Value = (int)order.ShippingStatus;
                     cmd.Parameters.Add("@OrderDate", SqlDbType.DateTime).Value = order.OrderDate;
-
+                    
                     conn.Open();
                     var id = cmd.ExecuteScalar();
                     return Convert.ToInt32(id);

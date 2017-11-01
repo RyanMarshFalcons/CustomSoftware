@@ -15,5 +15,6 @@ namespace Dvd.Data.Model
         public int QuantityInStock { get; set; }
         public decimal SalesPrice { get; set; }
         public decimal PurchasePrice { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

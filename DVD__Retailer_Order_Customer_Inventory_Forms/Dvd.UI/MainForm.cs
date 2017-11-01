@@ -12,71 +12,129 @@ namespace Dvd.UI
 {
     public partial class MainForm : Form
     {
-        OrderStatusForm orderStatusForm = null;
-        OrderEntryForm orderEntryForm = null;
-        AddInventoryForm addInventoryForm = null;
-       
-
         public MainForm()
         {
             InitializeComponent();
         }
         
-        private void OpenMdiClientOrderForm()
+        private void OpenNewOrderForm()
         {
-            var orderEntryForm = new OrderEntryForm();
+            var orderEntryForm = new NewOrderForm();
             orderEntryForm.MdiParent = this;
             orderEntryForm.Show();
         }
 
-        private void OpenMdiClientOrderStatusForm()
+        private void OpenViewOrderForm()
         {
-            var orderStatusForm = new OrderStatusForm();
+            var orderStatusForm = new ViewOrderForm();
             orderStatusForm.MdiParent = this;
             orderStatusForm.Show();
         }
 
-        private void OpenMdiClientAddInventoryForm()
+        private void OpenAddDVDForm()
         {
-            var addInventoryForm = new AddInventoryForm();
+            var addInventoryForm = new AddDVDForm();
             addInventoryForm.MdiParent = this;
             addInventoryForm.Show();
         }
 
-        protected void ShowOrderEntryForm()
+        private void OpenAddCustomerForm()
         {
-            var orderEntryForm = new OrderEntryForm();
-            orderEntryForm.ShowDialog(this);
-            orderEntryForm.Dispose();
+            var addCustomerForm = new AddCustomerForm();
+            addCustomerForm.MdiParent = this;
+            addCustomerForm.Show();
         }
 
-        protected void ShowOrderStatusForm()
+        private void OpenViewCustomerForm()
         {
-            var orderStatusForm = new OrderStatusForm();
-            orderStatusForm.ShowDialog(this);
-            orderStatusForm.Dispose();
+            var viewCustomerForm = new ViewCustomerForm();
+            viewCustomerForm.MdiParent = this;
+            viewCustomerForm.Show();
         }
 
-        protected void ShowAddInventoryForm()
+        private void OpenViewDVDForm()
         {
-            var addInventoryForm = new AddInventoryForm();
-            addInventoryForm.ShowDialog(this);
-            addInventoryForm.Dispose();
+            var viewDVDForm = new ViewDVDForm();
+            viewDVDForm.MdiParent = this;
+            viewDVDForm.Show();
+        }
+
+        private void OpenUpdateOrderForm()
+        {
+            var updateOrderForm = new UpdateOrderForm();
+            updateOrderForm.MdiParent = this;
+            updateOrderForm.Show();
+        }
+
+        private void OpenUpdateCustomerForm()
+        {
+            var updateCustomerForm = new UpdateCustomerForm();
+            updateCustomerForm.MdiParent = this;
+            updateCustomerForm.Show();
+        }
+
+        private void OpenUpdateDVDForm()
+        {
+            var updateDVDForm = new UpdateDVDForm();
+            updateDVDForm.MdiParent = this;
+            updateDVDForm.Show();
+        }
+
+        private void OpenDeleteOrderForm()
+        {
+            var deleteOrderForm = new DeleteOrderForm();
+            deleteOrderForm.MdiParent = this;
+            deleteOrderForm.Show();
         }
 
         private void orderFormToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenMdiClientOrderForm();
+            OpenNewOrderForm();
         }
 
         private void orderStatusFormToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenMdiClientOrderStatusForm();
+            OpenViewOrderForm();
         }
 
         private void addInventoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenMdiClientAddInventoryForm();
+            OpenAddDVDForm();
+        }
+
+        private void addCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenAddCustomerForm();
+        }
+
+        private void viewCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenViewCustomerForm();
+        }
+
+        private void viewDVDInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenViewDVDForm();
+        }
+
+        private void updateOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenUpdateOrderForm();
+        }
+
+        private void updateCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenUpdateCustomerForm();
+        }
+
+        private void updateDVDInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenUpdateDVDForm();
+        }
+
+        private void deleteOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenDeleteOrderForm();
         }
     }
 }

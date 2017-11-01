@@ -19,6 +19,7 @@ namespace TestDataLayer
         static void Main()
         {
             _customerStore = new CustomerStore();
+            _orderStore = new OrderStore();
 
             Console.WriteLine("Enter your selection: \n1) Delete Customer\n2) Get Customer\n3) Get Customers\n4) Update Customer\n5) Delete Order\n6) Get Order\n7) Get Orders\n8) Update Order");
             var selection = Console.ReadLine();
@@ -90,7 +91,7 @@ namespace TestDataLayer
                 case "5":
                     Console.Write("Enter the order number of the order you want to delete: ");
                     orderNumber = int.Parse(Console.ReadLine());
-                    DeleteCustomer(orderNumber);
+                    DeleteOrder(orderNumber);
                     break;
                 case "6":
                     Console.Write("Enter the order number of the order you want to get: ");
@@ -106,7 +107,7 @@ namespace TestDataLayer
                     var orders = GetOrders();
                     foreach (var ord in orders)
                     {
-                        Console.WriteLine($"Order Number: {ord.OrderNumber}");
+                        Console.WriteLine($"\nOrder Number: {ord.OrderNumber}");
                         Console.WriteLine($"Customer ID: {ord.CustomerId}");
                         Console.WriteLine($"Shipping Method: {(ShippingMethod)(ord.ShippingMethod)}");
                         Console.WriteLine($"Shipping Status: {(ShippingStatus)(ord.ShippingStatus)}");

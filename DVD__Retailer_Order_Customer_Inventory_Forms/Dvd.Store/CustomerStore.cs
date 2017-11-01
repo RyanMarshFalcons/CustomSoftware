@@ -16,10 +16,12 @@ namespace Dvd.Store
         private const string SQL_SELECT =
             "SELECT CustomerId, FirstName, LastName, PhoneNumber, EmailAddress, MailingAddress, "
         + "BillingAddress, CardIssuerId, CreditCardNumber, SecurityCode "
-        + "FROM [dbo].[Customer] ";
+        + "FROM [dbo].[Customer] "
+        + "WHERE IsDeleted = 0 ";
+        
 
         private const string SQL_SELECT_ROW =
-            SQL_SELECT + "WHERE CustomerID = @CustomerId ";
+            SQL_SELECT + "AND CustomerID = @CustomerId ";
 
         private const string SQL_INSERT = "INSERT INTO [dbo].[Customer] "
             + "([FirstName],[LastName],[PhoneNumber],[EmailAddress],[MailingAddress],[BillingAddress], "
@@ -40,6 +42,7 @@ namespace Dvd.Store
                 + "CardIssuerId = @CardIssuerId, "
                 + "CreditCardNumber = @CreditCardNumber, "
                 + "SecurityCode = @SecurityCode "
+                + "IsDeleted = @IsDeleted "
                 + "WHERE CustomerID = @CustomerID ";
 
         private const string SQL_DELETE =
