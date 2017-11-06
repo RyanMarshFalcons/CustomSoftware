@@ -7,15 +7,13 @@ using System.Threading.Tasks;
 
 namespace Dvd.Data.Interfaces
 {
-    public interface IOrderDomain
+    public interface IDvdDomain
     {
-        void CreateOrder(Order order);
+        void AddDVD(DVD dvd);
+        void UpdateDVD(DVD dvd);
 
-        void UpdateOrder(Order order);
+        DVD GetDVD(int dvdId);
 
-        Order GetOrder(int orderId);
-
-        List<Order> GetOrderlist();
-
+        List<DVD> GetDVDlist();
     }
 }

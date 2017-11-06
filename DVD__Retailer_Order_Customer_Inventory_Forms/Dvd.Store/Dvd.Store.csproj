@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="CustomerStore.cs" />
     <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="DvdStore.cs" />
     <Compile Include="OrderStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -40,6 +40,11 @@ namespace Dvd.Store
                 "UPDATE [dbo].[Order] "
                 + "SET IsDeleted = 1 "
                 + "WHERE OrderNumber = @OrderNumber ";
+
+        private const string SQL_VERIFY_EXISTS =
+            "SELECT COUNT(1) "
+            + "FROM [dbo].[Order] "
+            + "WHERE OrderNumber = @OrderNumber ";
         #endregion
 
 
@@ -139,5 +144,22 @@ namespace Dvd.Store
                 }
             }
         }
+
+        public bool VerifyOrderExists(int OrderNumber)
+        {
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                using (SqlCommand cmd = new SqlCommand(SQL_VERIFY_EXISTS, conn))
+                {
+                    cmd.Parameters.Add("@OrderNumber", SqlDbType.Int).Value = OrderNumber;
+
+                    conn.Open();
+                    var id = cmd.ExecuteScalar();
+                    return Convert.ToInt32(id) == 1;
+                }
+            }
+        }
+
+
     }
 }

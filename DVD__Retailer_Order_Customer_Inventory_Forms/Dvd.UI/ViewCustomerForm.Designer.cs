@@ -44,7 +44,7 @@
             this.CardIssuerLabel = new System.Windows.Forms.Label();
             this.CardIssuerTextBox = new System.Windows.Forms.RichTextBox();
             this.CreditCardNumberLabel = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.CreditCardNumberTextBox = new System.Windows.Forms.RichTextBox();
             this.SecurityCodeLabel = new System.Windows.Forms.Label();
             this.SecurityCodeTextBox = new System.Windows.Forms.RichTextBox();
             this.AssociatedOrderNumbersDataGridView = new System.Windows.Forms.DataGridView();
@@ -78,6 +78,7 @@
             this.EnterButton.TabIndex = 2;
             this.EnterButton.Text = "Enter";
             this.EnterButton.UseVisualStyleBackColor = false;
+            this.EnterButton.Click += new System.EventHandler(this.EnterButton_Click);
             // 
             // CustomerNameLabel
             // 
@@ -190,13 +191,13 @@
             this.CreditCardNumberLabel.TabIndex = 15;
             this.CreditCardNumberLabel.Text = "Credit Card Number:";
             // 
-            // richTextBox1
+            // CreditCardNumberTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(129, 427);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(294, 32);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "";
+            this.CreditCardNumberTextBox.Location = new System.Drawing.Point(129, 427);
+            this.CreditCardNumberTextBox.Name = "CreditCardNumberTextBox";
+            this.CreditCardNumberTextBox.Size = new System.Drawing.Size(294, 32);
+            this.CreditCardNumberTextBox.TabIndex = 16;
+            this.CreditCardNumberTextBox.Text = "";
             // 
             // SecurityCodeLabel
             // 
@@ -242,7 +243,7 @@
             this.Controls.Add(this.AssociatedOrderNumbersDataGridView);
             this.Controls.Add(this.SecurityCodeTextBox);
             this.Controls.Add(this.SecurityCodeLabel);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.CreditCardNumberTextBox);
             this.Controls.Add(this.CreditCardNumberLabel);
             this.Controls.Add(this.CardIssuerTextBox);
             this.Controls.Add(this.CardIssuerLabel);
@@ -285,7 +286,7 @@
         private System.Windows.Forms.Label CardIssuerLabel;
         private System.Windows.Forms.RichTextBox CardIssuerTextBox;
         private System.Windows.Forms.Label CreditCardNumberLabel;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox CreditCardNumberTextBox;
         private System.Windows.Forms.Label SecurityCodeLabel;
         private System.Windows.Forms.RichTextBox SecurityCodeTextBox;
         private System.Windows.Forms.DataGridView AssociatedOrderNumbersDataGridView;

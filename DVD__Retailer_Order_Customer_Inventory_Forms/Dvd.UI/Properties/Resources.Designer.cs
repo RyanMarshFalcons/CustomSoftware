@@ -59,15 +59,5 @@ namespace Dvd.UI.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _205_McGREGOR_CONOR {
-            get {
-                object obj = ResourceManager.GetObject("205-McGREGOR_CONOR", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

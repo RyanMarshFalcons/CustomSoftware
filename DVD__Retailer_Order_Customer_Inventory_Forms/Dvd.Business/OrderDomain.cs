@@ -46,5 +46,15 @@ namespace Dvd.Business
         {
             throw new NotImplementedException();
         }
+
+        public Order GetOrder(int orderId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Order> GetOrderlist()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

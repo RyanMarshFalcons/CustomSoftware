@@ -33,7 +33,7 @@
             this.GenreLabel = new System.Windows.Forms.Label();
             this.GenreComboBox = new System.Windows.Forms.ComboBox();
             this.QuantityLabel = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.QuantityTextBox = new System.Windows.Forms.RichTextBox();
             this.SalesPriceLabel = new System.Windows.Forms.Label();
             this.SalesPriceTextBox = new System.Windows.Forms.RichTextBox();
             this.PurchasePriceLabel = new System.Windows.Forms.Label();
@@ -84,13 +84,13 @@
             this.QuantityLabel.TabIndex = 4;
             this.QuantityLabel.Text = "Initial Quantity In Stock:";
             // 
-            // richTextBox1
+            // QuantityTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(16, 115);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(508, 33);
-            this.richTextBox1.TabIndex = 5;
-            this.richTextBox1.Text = "";
+            this.QuantityTextBox.Location = new System.Drawing.Point(16, 115);
+            this.QuantityTextBox.Name = "QuantityTextBox";
+            this.QuantityTextBox.Size = new System.Drawing.Size(508, 33);
+            this.QuantityTextBox.TabIndex = 5;
+            this.QuantityTextBox.Text = "";
             // 
             // SalesPriceLabel
             // 
@@ -135,19 +135,20 @@
             this.EnterButton.TabIndex = 10;
             this.EnterButton.Text = "Add To Database";
             this.EnterButton.UseVisualStyleBackColor = false;
+            this.EnterButton.Click += new System.EventHandler(this.EnterButton_Click);
             // 
             // AddDVDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(854, 657);
+            this.ClientSize = new System.Drawing.Size(854, 415);
             this.Controls.Add(this.EnterButton);
             this.Controls.Add(this.PurchasePriceTextBox);
             this.Controls.Add(this.PurchasePriceLabel);
             this.Controls.Add(this.SalesPriceTextBox);
             this.Controls.Add(this.SalesPriceLabel);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.QuantityTextBox);
             this.Controls.Add(this.QuantityLabel);
             this.Controls.Add(this.GenreComboBox);
             this.Controls.Add(this.GenreLabel);
@@ -168,7 +169,7 @@
         private System.Windows.Forms.Label GenreLabel;
         private System.Windows.Forms.ComboBox GenreComboBox;
         private System.Windows.Forms.Label QuantityLabel;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox QuantityTextBox;
         private System.Windows.Forms.Label SalesPriceLabel;
         private System.Windows.Forms.RichTextBox SalesPriceTextBox;
         private System.Windows.Forms.Label PurchasePriceLabel;

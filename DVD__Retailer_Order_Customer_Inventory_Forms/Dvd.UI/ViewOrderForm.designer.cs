@@ -42,9 +42,9 @@
             this.OrderDateLabel = new System.Windows.Forms.Label();
             this.OrderDateTextBox = new System.Windows.Forms.RichTextBox();
             this.CustomerIDLabel = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.CustomerIDTextbox = new System.Windows.Forms.RichTextBox();
             this.OrderTotalLabel = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.OrderTotalTextBox = new System.Windows.Forms.RichTextBox();
             this.DvdsOrderedLabel = new System.Windows.Forms.Label();
             this.DvdsOrderedDataGrid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.DvdsOrderedDataGrid)).BeginInit();
@@ -85,6 +85,7 @@
             this.EnterButton.TabIndex = 3;
             this.EnterButton.Text = "Enter";
             this.EnterButton.UseVisualStyleBackColor = false;
+            this.EnterButton.Click += new System.EventHandler(this.EnterButton_Click);
             // 
             // CustomerNameTextBox
             // 
@@ -171,13 +172,13 @@
             this.CustomerIDLabel.TabIndex = 13;
             this.CustomerIDLabel.Text = "Customer ID:";
             // 
-            // richTextBox1
+            // CustomerIDTextbox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(113, 148);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(215, 31);
-            this.richTextBox1.TabIndex = 14;
-            this.richTextBox1.Text = "";
+            this.CustomerIDTextbox.Location = new System.Drawing.Point(113, 148);
+            this.CustomerIDTextbox.Name = "CustomerIDTextbox";
+            this.CustomerIDTextbox.Size = new System.Drawing.Size(215, 31);
+            this.CustomerIDTextbox.TabIndex = 14;
+            this.CustomerIDTextbox.Text = "";
             // 
             // OrderTotalLabel
             // 
@@ -188,13 +189,13 @@
             this.OrderTotalLabel.TabIndex = 15;
             this.OrderTotalLabel.Text = "Order Total:";
             // 
-            // richTextBox2
+            // OrderTotalTextBox
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(113, 397);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(219, 29);
-            this.richTextBox2.TabIndex = 16;
-            this.richTextBox2.Text = "";
+            this.OrderTotalTextBox.Location = new System.Drawing.Point(113, 397);
+            this.OrderTotalTextBox.Name = "OrderTotalTextBox";
+            this.OrderTotalTextBox.Size = new System.Drawing.Size(219, 29);
+            this.OrderTotalTextBox.TabIndex = 16;
+            this.OrderTotalTextBox.Text = "";
             // 
             // DvdsOrderedLabel
             // 
@@ -221,9 +222,9 @@
             this.ClientSize = new System.Drawing.Size(730, 487);
             this.Controls.Add(this.DvdsOrderedDataGrid);
             this.Controls.Add(this.DvdsOrderedLabel);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.OrderTotalTextBox);
             this.Controls.Add(this.OrderTotalLabel);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.CustomerIDTextbox);
             this.Controls.Add(this.CustomerIDLabel);
             this.Controls.Add(this.OrderDateTextBox);
             this.Controls.Add(this.OrderDateLabel);
@@ -263,9 +264,9 @@
         private System.Windows.Forms.Label OrderDateLabel;
         private System.Windows.Forms.RichTextBox OrderDateTextBox;
         private System.Windows.Forms.Label CustomerIDLabel;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox CustomerIDTextbox;
         private System.Windows.Forms.Label OrderTotalLabel;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox OrderTotalTextBox;
         private System.Windows.Forms.Label DvdsOrderedLabel;
         private System.Windows.Forms.DataGridView DvdsOrderedDataGrid;
     }

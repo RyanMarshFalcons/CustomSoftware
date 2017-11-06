@@ -50,8 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\ICustomerDomain.cs" />
+    <Compile Include="Interfaces\IDvdDomain.cs" />
     <Compile Include="Interfaces\IOrderDomain.cs" />
     <Compile Include="Interfaces\Store\ICustomerStore.cs" />
+    <Compile Include="Interfaces\Store\IDvdStore.cs" />
     <Compile Include="Interfaces\Store\IOrderStore.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\DVD.cs" />

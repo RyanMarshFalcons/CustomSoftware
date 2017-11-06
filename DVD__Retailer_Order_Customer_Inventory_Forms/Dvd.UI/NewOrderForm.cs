@@ -11,7 +11,7 @@ namespace Dvd.UI
     public partial class NewOrderForm : Form
     {
         private Customer FormCustomer = new Customer();
-        private Order FormOrder;
+        private Order FormOrder = new Order();
         IOrderDomain OrderDomain;
         private List<OrderItem> dvdsOrdered = new List<OrderItem>();
 
@@ -25,7 +25,6 @@ namespace Dvd.UI
         {
             LoadCreditCards();
             LoadShippingMethods();
-            FormCustomer = new Customer();
         }
 
         private void LoadCreditCards()
@@ -57,10 +56,10 @@ namespace Dvd.UI
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            ProcessOrderForm();
+            ProcessNewOrderForm();
         }
 
-        private void ProcessOrderForm()
+        private void ProcessNewOrderForm()
         {
             
             var allFormFieldsValid = true;

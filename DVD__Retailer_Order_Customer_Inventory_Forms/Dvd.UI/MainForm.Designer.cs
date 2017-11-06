@@ -160,30 +160,35 @@
             this.deleteCustomerToolStripMenuItem.Name = "deleteCustomerToolStripMenuItem";
             this.deleteCustomerToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.deleteCustomerToolStripMenuItem.Text = "Delete Customer";
+            this.deleteCustomerToolStripMenuItem.Click += new System.EventHandler(this.deleteCustomerToolStripMenuItem_Click);
             // 
             // deleteDVDToolStripMenuItem
             // 
             this.deleteDVDToolStripMenuItem.Name = "deleteDVDToolStripMenuItem";
             this.deleteDVDToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.deleteDVDToolStripMenuItem.Text = "Delete DVD";
+            this.deleteDVDToolStripMenuItem.Click += new System.EventHandler(this.deleteDVDToolStripMenuItem_Click);
             // 
             // viewAllOrdersToolStripMenuItem
             // 
             this.viewAllOrdersToolStripMenuItem.Name = "viewAllOrdersToolStripMenuItem";
             this.viewAllOrdersToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.viewAllOrdersToolStripMenuItem.Text = "View All Orders";
+            this.viewAllOrdersToolStripMenuItem.Click += new System.EventHandler(this.viewAllOrdersToolStripMenuItem_Click);
             // 
             // viewAllCustomersToolStripMenuItem
             // 
             this.viewAllCustomersToolStripMenuItem.Name = "viewAllCustomersToolStripMenuItem";
             this.viewAllCustomersToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.viewAllCustomersToolStripMenuItem.Text = "View All Customers";
+            this.viewAllCustomersToolStripMenuItem.Click += new System.EventHandler(this.viewAllCustomersToolStripMenuItem_Click);
             // 
             // viewAllDVDsToolStripMenuItem
             // 
             this.viewAllDVDsToolStripMenuItem.Name = "viewAllDVDsToolStripMenuItem";
             this.viewAllDVDsToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.viewAllDVDsToolStripMenuItem.Text = "View All DVDs";
+            this.viewAllDVDsToolStripMenuItem.Click += new System.EventHandler(this.viewAllDVDsToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 

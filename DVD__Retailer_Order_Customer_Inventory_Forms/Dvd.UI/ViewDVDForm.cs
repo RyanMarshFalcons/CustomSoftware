@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Dvd.Data.Model;
+using Dvd.Store;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,54 @@ namespace Dvd.UI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ProcessViewDVDForm();
+        }
 
+        private void ProcessViewDVDForm()
+        {
+            if (!IsValidDVD_ID(EnterDVDIDTextBox.Text))
+            {
+                const string message = "A valid DVD ID was not entered";
+                const string caption = "Unable To View DVD";
+                var result = MessageBox.Show(message, caption,
+                                             MessageBoxButtons.OK,
+                                             MessageBoxIcon.Information);
+            }
+            else
+            {
+                var dvdStore = new DvdStore();
+                var formDVD = dvdStore.GetDVD(int.Parse(EnterDVDIDTextBox.Text));
+                DisplayDVDInformation(formDVD);
+            }
+        }
+
+        private bool CheckIfInt(string input)
+        {
+            var num = 0;
+            return int.TryParse(input, out num);
+        }
+
+        private bool IsValidDVD_ID(string input)
+        {
+            if (CheckIfInt(input) == false)
+            {
+                return false;
+            }
+            else
+            {
+                var dvdID = int.Parse(input);
+                var dvdStore = new DvdStore();
+                return dvdStore.VerifDVDExists(dvdID);
+            }
+        }
+
+        private void DisplayDVDInformation(DVD formDVD)
+        {
+            TitleTextBox.Text = formDVD.Title;
+            GenreTextBox.Text = formDVD.Genre.ToString();
+            QuantityInStockTextBox.Text = formDVD.QuantityInStock.ToString();
+            SalesPriceTextBox.Text = formDVD.SalesPrice.ToString();
+            PurchasePriceTextBox.Text = formDVD.PurchasePrice.ToString();
         }
     }
 }

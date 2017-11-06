@@ -49,6 +49,11 @@ namespace Dvd.Store
                 "UPDATE [dbo].[Customer] "
                 + "SET IsDeleted = 1 "
                 + "WHERE CustomerId = @CustomerId ";
+
+        private const string SQL_VERIFY_EXISTS =
+            "SELECT COUNT(1) "
+            + "FROM [dbo].[Customer] "
+            + "WHERE CustomerID = @CustomerID ";
         #endregion
 
         public int AddCustomer(Customer customer)
@@ -163,6 +168,21 @@ namespace Dvd.Store
                 }
             }
             return rowsAffected;
+        }
+
+        public bool VerifyCustomerExists(int CustomerID)
+        {
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                using (SqlCommand cmd = new SqlCommand(SQL_VERIFY_EXISTS, conn))
+                {
+                    cmd.Parameters.Add("@CustomerID", SqlDbType.Int).Value = CustomerID;
+
+                    conn.Open();
+                    var id = cmd.ExecuteScalar();
+                    return Convert.ToInt32(id) == 1;
+                }
+            }
         }
     }
 }

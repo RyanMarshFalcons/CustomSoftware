@@ -87,6 +87,41 @@ namespace Dvd.UI
             deleteOrderForm.Show();
         }
 
+        private void OpenDeleteCustomerForm()
+        {
+            var deleteCustomerForm = new DeleteCustomerForm();
+            deleteCustomerForm.MdiParent = this;
+            deleteCustomerForm.Show();
+        }
+
+        private void OpenDeleteDVDForm()
+        {
+            var deleteDVDForm = new DeleteDVDForm();
+            deleteDVDForm.MdiParent = this;
+            deleteDVDForm.Show();
+        }
+
+        private void OpenViewAllOrdersForm()
+        {
+            var viewAllOrdersForm = new ViewAllOrdersForm();
+            viewAllOrdersForm.MdiParent = this;
+            viewAllOrdersForm.Show();
+        }
+
+        private void OpenViewAllCustomersForm()
+        {
+            var viewAllCustomersForm = new ViewAllCustomersForm();
+            viewAllCustomersForm.MdiParent = this;
+            viewAllCustomersForm.Show();
+        }
+
+        private void OpenViewAllDVDsForm()
+        {
+            var viewAllDVDsForm = new ViewAllDVDsForm();
+            viewAllDVDsForm.MdiParent = this;
+            viewAllDVDsForm.Show();
+        }
+
         private void orderFormToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenNewOrderForm();
@@ -135,6 +170,31 @@ namespace Dvd.UI
         private void deleteOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenDeleteOrderForm();
+        }
+
+        private void deleteCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenDeleteCustomerForm();
+        }
+
+        private void deleteDVDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenDeleteDVDForm();
+        }
+
+        private void viewAllOrdersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenViewAllOrdersForm();
+        }
+
+        private void viewAllCustomersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenViewAllCustomersForm();
+        }
+
+        private void viewAllDVDsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenViewAllDVDsForm();
         }
     }
 }

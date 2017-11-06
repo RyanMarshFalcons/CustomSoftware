@@ -58,6 +58,18 @@
     <Compile Include="AddDVDForm.Designer.cs">
       <DependentUpon>AddDVDForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeleteCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCustomerForm.Designer.cs">
+      <DependentUpon>DeleteCustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteDVDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteDVDForm.Designer.cs">
+      <DependentUpon>DeleteDVDForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +106,24 @@
     <Compile Include="UpdateOrderForm.Designer.cs">
       <DependentUpon>UpdateOrderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewAllCustomersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllCustomersForm.Designer.cs">
+      <DependentUpon>ViewAllCustomersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAllDVDsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllDVDsForm.Designer.cs">
+      <DependentUpon>ViewAllDVDsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAllOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAllOrdersForm.Designer.cs">
+      <DependentUpon>ViewAllOrdersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewCustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +150,12 @@
     <EmbeddedResource Include="AddDVDForm.resx">
       <DependentUpon>AddDVDForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCustomerForm.resx">
+      <DependentUpon>DeleteCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteDVDForm.resx">
+      <DependentUpon>DeleteDVDForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteOrderForm.resx">
       <DependentUpon>DeleteOrderForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +173,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateOrderForm.resx">
       <DependentUpon>UpdateOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllCustomersForm.resx">
+      <DependentUpon>ViewAllCustomersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllDVDsForm.resx">
+      <DependentUpon>ViewAllDVDsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAllOrdersForm.resx">
+      <DependentUpon>ViewAllOrdersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewCustomerForm.resx">
       <DependentUpon>ViewCustomerForm.cs</DependentUpon>
@@ -179,9 +224,13 @@
       <Project>{b706c9e0-f1db-4984-a041-11f070da6493}</Project>
       <Name>Dvd.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Dvd.Store\Dvd.Store.csproj">
+      <Project>{3713c461-611b-4462-9f5b-0203e02b81d8}</Project>
+      <Name>Dvd.Store</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\205-McGREGOR_CONOR.png" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

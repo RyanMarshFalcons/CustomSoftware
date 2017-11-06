@@ -31,7 +31,7 @@
             this.FirstNameLabel = new System.Windows.Forms.Label();
             this.FirstNameTextBox = new System.Windows.Forms.RichTextBox();
             this.LastNameLabel = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.LastNameTextBox = new System.Windows.Forms.RichTextBox();
             this.PhoneNumberLabel = new System.Windows.Forms.Label();
             this.PhoneNumberTextBox = new System.Windows.Forms.RichTextBox();
             this.EmailAddressLabel = new System.Windows.Forms.Label();
@@ -75,13 +75,13 @@
             this.LastNameLabel.TabIndex = 2;
             this.LastNameLabel.Text = "Last Name";
             // 
-            // richTextBox1
+            // LastNameTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(13, 114);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(236, 29);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.LastNameTextBox.Location = new System.Drawing.Point(13, 114);
+            this.LastNameTextBox.Name = "LastNameTextBox";
+            this.LastNameTextBox.Size = new System.Drawing.Size(236, 29);
+            this.LastNameTextBox.TabIndex = 3;
+            this.LastNameTextBox.Text = "";
             // 
             // PhoneNumberLabel
             // 
@@ -158,7 +158,6 @@
             this.CreditCardIssuerComboBox.Name = "CreditCardIssuerComboBox";
             this.CreditCardIssuerComboBox.Size = new System.Drawing.Size(161, 21);
             this.CreditCardIssuerComboBox.TabIndex = 12;
-            this.CreditCardIssuerComboBox.SelectedIndexChanged += new System.EventHandler(this.CreditCardIssuerComboBox_SelectedIndexChanged);
             // 
             // CreditCardIssuerLabel
             // 
@@ -213,6 +212,7 @@
             this.AddCustomerButton.TabIndex = 18;
             this.AddCustomerButton.Text = "Add Customer";
             this.AddCustomerButton.UseVisualStyleBackColor = false;
+            this.AddCustomerButton.Click += new System.EventHandler(this.AddCustomerButton_Click);
             // 
             // AddCustomerForm
             // 
@@ -235,7 +235,7 @@
             this.Controls.Add(this.EmailAddressLabel);
             this.Controls.Add(this.PhoneNumberTextBox);
             this.Controls.Add(this.PhoneNumberLabel);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.LastNameTextBox);
             this.Controls.Add(this.LastNameLabel);
             this.Controls.Add(this.FirstNameTextBox);
             this.Controls.Add(this.FirstNameLabel);
@@ -252,7 +252,7 @@
         private System.Windows.Forms.Label FirstNameLabel;
         private System.Windows.Forms.RichTextBox FirstNameTextBox;
         private System.Windows.Forms.Label LastNameLabel;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox LastNameTextBox;
         private System.Windows.Forms.Label PhoneNumberLabel;
         private System.Windows.Forms.RichTextBox PhoneNumberTextBox;
         private System.Windows.Forms.Label EmailAddressLabel;

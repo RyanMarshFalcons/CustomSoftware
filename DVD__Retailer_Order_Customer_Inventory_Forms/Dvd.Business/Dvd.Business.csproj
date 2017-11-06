@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomerDomain.cs" />
+    <Compile Include="DvdDomain.cs" />
     <Compile Include="OrderDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

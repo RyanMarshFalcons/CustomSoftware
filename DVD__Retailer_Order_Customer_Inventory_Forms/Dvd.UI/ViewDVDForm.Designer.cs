@@ -34,13 +34,13 @@
             this.TitleLabel = new System.Windows.Forms.Label();
             this.TitleTextBox = new System.Windows.Forms.RichTextBox();
             this.GenreLabel = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.GenreTextBox = new System.Windows.Forms.RichTextBox();
             this.QuantityInStockLabel = new System.Windows.Forms.Label();
             this.QuantityInStockTextBox = new System.Windows.Forms.RichTextBox();
             this.SalesPriceLabel = new System.Windows.Forms.Label();
             this.SalesPriceTextBox = new System.Windows.Forms.RichTextBox();
             this.PurchasePriceLabel = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.PurchasePriceTextBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // EnterDVDIDLabel
@@ -97,13 +97,13 @@
             this.GenreLabel.TabIndex = 5;
             this.GenreLabel.Text = "Genre:";
             // 
-            // richTextBox1
+            // GenreTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(115, 165);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(488, 37);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.GenreTextBox.Location = new System.Drawing.Point(115, 165);
+            this.GenreTextBox.Name = "GenreTextBox";
+            this.GenreTextBox.Size = new System.Drawing.Size(488, 37);
+            this.GenreTextBox.TabIndex = 6;
+            this.GenreTextBox.Text = "";
             // 
             // QuantityInStockLabel
             // 
@@ -148,13 +148,13 @@
             this.PurchasePriceLabel.TabIndex = 11;
             this.PurchasePriceLabel.Text = "Purchase Price:";
             // 
-            // richTextBox2
+            // PurchasePriceTextBox
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(115, 368);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(488, 46);
-            this.richTextBox2.TabIndex = 12;
-            this.richTextBox2.Text = "";
+            this.PurchasePriceTextBox.Location = new System.Drawing.Point(115, 368);
+            this.PurchasePriceTextBox.Name = "PurchasePriceTextBox";
+            this.PurchasePriceTextBox.Size = new System.Drawing.Size(488, 46);
+            this.PurchasePriceTextBox.TabIndex = 12;
+            this.PurchasePriceTextBox.Text = "";
             // 
             // ViewDVDForm
             // 
@@ -162,13 +162,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(861, 455);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.PurchasePriceTextBox);
             this.Controls.Add(this.PurchasePriceLabel);
             this.Controls.Add(this.SalesPriceTextBox);
             this.Controls.Add(this.SalesPriceLabel);
             this.Controls.Add(this.QuantityInStockTextBox);
             this.Controls.Add(this.QuantityInStockLabel);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.GenreTextBox);
             this.Controls.Add(this.GenreLabel);
             this.Controls.Add(this.TitleTextBox);
             this.Controls.Add(this.TitleLabel);
@@ -190,12 +190,12 @@
         private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.RichTextBox TitleTextBox;
         private System.Windows.Forms.Label GenreLabel;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox GenreTextBox;
         private System.Windows.Forms.Label QuantityInStockLabel;
         private System.Windows.Forms.RichTextBox QuantityInStockTextBox;
         private System.Windows.Forms.Label SalesPriceLabel;
         private System.Windows.Forms.RichTextBox SalesPriceTextBox;
         private System.Windows.Forms.Label PurchasePriceLabel;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox PurchasePriceTextBox;
     }
 }
