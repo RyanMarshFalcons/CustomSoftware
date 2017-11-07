@@ -142,8 +142,8 @@ namespace Dvd.UI
 
             if (!allFormFieldsValid)
             {
-                const string message = "Not all of the required fields were filled out correctly";
-                const string caption = "Unable To Submit Order";
+                var message = "Not all of the required fields were filled out correctly";
+                var caption = "Unable To Submit Order";
                 var result = MessageBox.Show(message, caption,
                                              MessageBoxButtons.OK,
                                              MessageBoxIcon.Information);

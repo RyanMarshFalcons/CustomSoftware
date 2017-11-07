@@ -42,6 +42,7 @@
             this.EnterButton.TabIndex = 5;
             this.EnterButton.Text = "Enter";
             this.EnterButton.UseVisualStyleBackColor = false;
+            this.EnterButton.Click += new System.EventHandler(this.EnterButton_Click);
             // 
             // EnterCustomerIDTextBox
             // 

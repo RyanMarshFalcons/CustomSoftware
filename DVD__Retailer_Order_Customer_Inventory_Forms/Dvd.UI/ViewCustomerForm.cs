@@ -28,8 +28,8 @@ namespace Dvd.UI
         {
             if (!IsValidCustomerID(EnterCustomerIDTextBox.Text))
             {
-                const string message = "A valid customer ID was not entered";
-                const string caption = "Unable To View Customer";
+                var message = "A valid customer ID was not entered";
+                var caption = "Unable To View Customer";
                 var result = MessageBox.Show(message, caption,
                                              MessageBoxButtons.OK,
                                              MessageBoxIcon.Information);

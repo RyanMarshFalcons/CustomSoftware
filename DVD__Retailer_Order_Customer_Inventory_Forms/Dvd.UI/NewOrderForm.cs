@@ -178,8 +178,8 @@ namespace Dvd.UI
 
             if (!allFormFieldsValid)
             {
-                const string message = "Not all of the required fields were filled out correctly";
-                const string caption = "Unable To Submit Order";
+                var message = "Not all of the required fields were filled out correctly";
+                var caption = "Unable To Submit Order";
                 var result = MessageBox.Show(message, caption,
                                              MessageBoxButtons.OK,
                                              MessageBoxIcon.Information);
@@ -277,8 +277,8 @@ namespace Dvd.UI
             }
             else
             {
-                const string message = "Invalid DVD ID and Quantity input";
-                const string caption = "Unable To Add DVD To Order";
+                var message = "Invalid DVD ID and Quantity input";
+                var caption = "Unable To Add DVD To Order";
                 var result = MessageBox.Show(message, caption,
                                              MessageBoxButtons.OK,
                                              MessageBoxIcon.Information);

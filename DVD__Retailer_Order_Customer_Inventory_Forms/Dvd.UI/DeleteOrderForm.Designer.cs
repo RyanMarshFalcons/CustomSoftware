@@ -59,6 +59,7 @@
             this.EnterButton.TabIndex = 2;
             this.EnterButton.Text = "Enter";
             this.EnterButton.UseVisualStyleBackColor = false;
+            this.EnterButton.Click += new System.EventHandler(this.EnterButton_Click);
             // 
             // DeleteOrderForm
             // 

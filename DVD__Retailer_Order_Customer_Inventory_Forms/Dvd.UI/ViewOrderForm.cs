@@ -36,8 +36,8 @@ namespace Dvd.UI
         {
             if (!IsValidOrderNumber(EnterOrderNumberTextBox.Text))
             {
-                const string message = "A valid order number was not entered";
-                const string caption = "Unable To View Order";
+                var message = "A valid order number was not entered";
+                var caption = "Unable To View Order";
                 var result = MessageBox.Show(message, caption,
                                              MessageBoxButtons.OK,
                                              MessageBoxIcon.Information);

@@ -28,8 +28,8 @@ namespace Dvd.UI
         {
             if (!IsValidDVD_ID(EnterDVDIDTextBox.Text))
             {
-                const string message = "A valid DVD ID was not entered";
-                const string caption = "Unable To View DVD";
+                var message = "A valid DVD ID was not entered";
+                var caption = "Unable To View DVD";
                 var result = MessageBox.Show(message, caption,
                                              MessageBoxButtons.OK,
                                              MessageBoxIcon.Information);
