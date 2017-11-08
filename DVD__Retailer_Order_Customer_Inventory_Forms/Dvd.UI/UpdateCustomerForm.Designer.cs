@@ -37,29 +37,28 @@
             this.PhoneNumberLabel = new System.Windows.Forms.Label();
             this.CustomerNameLabel = new System.Windows.Forms.Label();
             this.EnterCustomerIDLabel = new System.Windows.Forms.Label();
-            this.AssociatedOrderNumbersLabel = new System.Windows.Forms.Label();
-            this.AssociatedOrderNumbersDataGridView = new System.Windows.Forms.DataGridView();
             this.SecurityCodeTextBox = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.CardIssuerTextBox = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.SecurityCode_Label = new System.Windows.Forms.Label();
+            this.CreditCardNumberTextBox = new System.Windows.Forms.RichTextBox();
+            this.CreditCardNumber_Label = new System.Windows.Forms.Label();
+            this.CardIssuer_Label = new System.Windows.Forms.Label();
             this.BillingAddressTextBox = new System.Windows.Forms.RichTextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.BillingAddress_Label = new System.Windows.Forms.Label();
             this.MailingAddressTextBox = new System.Windows.Forms.RichTextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.MailingAddress_Label = new System.Windows.Forms.Label();
             this.EmailAddressTextBox = new System.Windows.Forms.RichTextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.EmailAddress_Label = new System.Windows.Forms.Label();
             this.PhoneNumberTextBox = new System.Windows.Forms.RichTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.CustomerNameTextBox = new System.Windows.Forms.RichTextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.PhoneNumber_Label = new System.Windows.Forms.Label();
+            this.FirstNameTextBox = new System.Windows.Forms.RichTextBox();
+            this.FirstName_Label = new System.Windows.Forms.Label();
             this.EnterButton = new System.Windows.Forms.Button();
             this.EnterCustomerIDTextBox = new System.Windows.Forms.RichTextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.EnterCustomerID_Label = new System.Windows.Forms.Label();
             this.UpdateDatabaseButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.AssociatedOrderNumbersDataGridView)).BeginInit();
+            this.CardIssuerComboBox = new System.Windows.Forms.ComboBox();
+            this.LastName_Label = new System.Windows.Forms.Label();
+            this.LastNameTextBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // SecurityCodeLabel
@@ -143,158 +142,134 @@
             this.EnterCustomerIDLabel.TabIndex = 21;
             this.EnterCustomerIDLabel.Text = "Enter Customer ID:";
             // 
-            // AssociatedOrderNumbersLabel
-            // 
-            this.AssociatedOrderNumbersLabel.AutoSize = true;
-            this.AssociatedOrderNumbersLabel.Location = new System.Drawing.Point(605, 128);
-            this.AssociatedOrderNumbersLabel.Name = "AssociatedOrderNumbersLabel";
-            this.AssociatedOrderNumbersLabel.Size = new System.Drawing.Size(133, 13);
-            this.AssociatedOrderNumbersLabel.TabIndex = 59;
-            this.AssociatedOrderNumbersLabel.Text = "Associated Order Numbers";
-            // 
-            // AssociatedOrderNumbersDataGridView
-            // 
-            this.AssociatedOrderNumbersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AssociatedOrderNumbersDataGridView.Location = new System.Drawing.Point(454, 144);
-            this.AssociatedOrderNumbersDataGridView.Name = "AssociatedOrderNumbersDataGridView";
-            this.AssociatedOrderNumbersDataGridView.Size = new System.Drawing.Size(457, 369);
-            this.AssociatedOrderNumbersDataGridView.TabIndex = 58;
-            // 
             // SecurityCodeTextBox
             // 
-            this.SecurityCodeTextBox.Location = new System.Drawing.Point(140, 477);
+            this.SecurityCodeTextBox.Location = new System.Drawing.Point(598, 378);
+            this.SecurityCodeTextBox.MaxLength = 3;
             this.SecurityCodeTextBox.Name = "SecurityCodeTextBox";
             this.SecurityCodeTextBox.Size = new System.Drawing.Size(294, 36);
             this.SecurityCodeTextBox.TabIndex = 57;
             this.SecurityCodeTextBox.Text = "";
             // 
-            // label1
+            // SecurityCode_Label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 477);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
-            this.label1.TabIndex = 56;
-            this.label1.Text = "Security Code:";
+            this.SecurityCode_Label.AutoSize = true;
+            this.SecurityCode_Label.Location = new System.Drawing.Point(516, 381);
+            this.SecurityCode_Label.Name = "SecurityCode_Label";
+            this.SecurityCode_Label.Size = new System.Drawing.Size(76, 13);
+            this.SecurityCode_Label.TabIndex = 56;
+            this.SecurityCode_Label.Text = "Security Code:";
             // 
-            // richTextBox1
+            // CreditCardNumberTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(140, 421);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(294, 32);
-            this.richTextBox1.TabIndex = 55;
-            this.richTextBox1.Text = "";
+            this.CreditCardNumberTextBox.Location = new System.Drawing.Point(598, 307);
+            this.CreditCardNumberTextBox.Name = "CreditCardNumberTextBox";
+            this.CreditCardNumberTextBox.Size = new System.Drawing.Size(294, 32);
+            this.CreditCardNumberTextBox.TabIndex = 55;
+            this.CreditCardNumberTextBox.Text = "";
             // 
-            // label2
+            // CreditCardNumber_Label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 421);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 13);
-            this.label2.TabIndex = 54;
-            this.label2.Text = "Credit Card Number:";
+            this.CreditCardNumber_Label.AutoSize = true;
+            this.CreditCardNumber_Label.Location = new System.Drawing.Point(490, 310);
+            this.CreditCardNumber_Label.Name = "CreditCardNumber_Label";
+            this.CreditCardNumber_Label.Size = new System.Drawing.Size(102, 13);
+            this.CreditCardNumber_Label.TabIndex = 54;
+            this.CreditCardNumber_Label.Text = "Credit Card Number:";
             // 
-            // CardIssuerTextBox
+            // CardIssuer_Label
             // 
-            this.CardIssuerTextBox.Location = new System.Drawing.Point(140, 365);
-            this.CardIssuerTextBox.Name = "CardIssuerTextBox";
-            this.CardIssuerTextBox.Size = new System.Drawing.Size(294, 31);
-            this.CardIssuerTextBox.TabIndex = 53;
-            this.CardIssuerTextBox.Text = "";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(70, 365);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
-            this.label3.TabIndex = 52;
-            this.label3.Text = "Card Issuer:";
+            this.CardIssuer_Label.AutoSize = true;
+            this.CardIssuer_Label.Location = new System.Drawing.Point(703, 93);
+            this.CardIssuer_Label.Name = "CardIssuer_Label";
+            this.CardIssuer_Label.Size = new System.Drawing.Size(63, 13);
+            this.CardIssuer_Label.TabIndex = 52;
+            this.CardIssuer_Label.Text = "Card Issuer:";
             // 
             // BillingAddressTextBox
             // 
-            this.BillingAddressTextBox.Location = new System.Drawing.Point(140, 307);
+            this.BillingAddressTextBox.Location = new System.Drawing.Point(138, 382);
             this.BillingAddressTextBox.Name = "BillingAddressTextBox";
             this.BillingAddressTextBox.Size = new System.Drawing.Size(294, 32);
             this.BillingAddressTextBox.TabIndex = 51;
             this.BillingAddressTextBox.Text = "";
             // 
-            // label4
+            // BillingAddress_Label
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(55, 310);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 13);
-            this.label4.TabIndex = 50;
-            this.label4.Text = "Billing Address:";
+            this.BillingAddress_Label.AutoSize = true;
+            this.BillingAddress_Label.Location = new System.Drawing.Point(57, 385);
+            this.BillingAddress_Label.Name = "BillingAddress_Label";
+            this.BillingAddress_Label.Size = new System.Drawing.Size(78, 13);
+            this.BillingAddress_Label.TabIndex = 50;
+            this.BillingAddress_Label.Text = "Billing Address:";
             // 
             // MailingAddressTextBox
             // 
-            this.MailingAddressTextBox.Location = new System.Drawing.Point(142, 254);
+            this.MailingAddressTextBox.Location = new System.Drawing.Point(138, 328);
             this.MailingAddressTextBox.Name = "MailingAddressTextBox";
             this.MailingAddressTextBox.Size = new System.Drawing.Size(292, 29);
             this.MailingAddressTextBox.TabIndex = 49;
             this.MailingAddressTextBox.Text = "";
             // 
-            // label5
+            // MailingAddress_Label
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 254);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 13);
-            this.label5.TabIndex = 48;
-            this.label5.Text = "Mailing Address:";
+            this.MailingAddress_Label.AutoSize = true;
+            this.MailingAddress_Label.Location = new System.Drawing.Point(51, 326);
+            this.MailingAddress_Label.Name = "MailingAddress_Label";
+            this.MailingAddress_Label.Size = new System.Drawing.Size(84, 13);
+            this.MailingAddress_Label.TabIndex = 48;
+            this.MailingAddress_Label.Text = "Mailing Address:";
             // 
             // EmailAddressTextBox
             // 
-            this.EmailAddressTextBox.Location = new System.Drawing.Point(142, 202);
+            this.EmailAddressTextBox.Location = new System.Drawing.Point(138, 274);
             this.EmailAddressTextBox.Name = "EmailAddressTextBox";
             this.EmailAddressTextBox.Size = new System.Drawing.Size(292, 31);
             this.EmailAddressTextBox.TabIndex = 47;
             this.EmailAddressTextBox.Text = "";
             // 
-            // label6
+            // EmailAddress_Label
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(57, 202);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 13);
-            this.label6.TabIndex = 46;
-            this.label6.Text = "Email Address:";
+            this.EmailAddress_Label.AutoSize = true;
+            this.EmailAddress_Label.Location = new System.Drawing.Point(56, 274);
+            this.EmailAddress_Label.Name = "EmailAddress_Label";
+            this.EmailAddress_Label.Size = new System.Drawing.Size(76, 13);
+            this.EmailAddress_Label.TabIndex = 46;
+            this.EmailAddress_Label.Text = "Email Address:";
             // 
             // PhoneNumberTextBox
             // 
-            this.PhoneNumberTextBox.Location = new System.Drawing.Point(142, 144);
+            this.PhoneNumberTextBox.Location = new System.Drawing.Point(138, 222);
             this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(292, 29);
             this.PhoneNumberTextBox.TabIndex = 45;
             this.PhoneNumberTextBox.Text = "";
             // 
-            // label7
+            // PhoneNumber_Label
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(52, 144);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 13);
-            this.label7.TabIndex = 44;
-            this.label7.Text = "Phone Number:";
+            this.PhoneNumber_Label.AutoSize = true;
+            this.PhoneNumber_Label.Location = new System.Drawing.Point(48, 222);
+            this.PhoneNumber_Label.Name = "PhoneNumber_Label";
+            this.PhoneNumber_Label.Size = new System.Drawing.Size(81, 13);
+            this.PhoneNumber_Label.TabIndex = 44;
+            this.PhoneNumber_Label.Text = "Phone Number:";
             // 
-            // CustomerNameTextBox
+            // FirstNameTextBox
             // 
-            this.CustomerNameTextBox.Location = new System.Drawing.Point(140, 93);
-            this.CustomerNameTextBox.Name = "CustomerNameTextBox";
-            this.CustomerNameTextBox.Size = new System.Drawing.Size(292, 26);
-            this.CustomerNameTextBox.TabIndex = 43;
-            this.CustomerNameTextBox.Text = "";
+            this.FirstNameTextBox.Location = new System.Drawing.Point(140, 109);
+            this.FirstNameTextBox.Name = "FirstNameTextBox";
+            this.FirstNameTextBox.Size = new System.Drawing.Size(292, 26);
+            this.FirstNameTextBox.TabIndex = 43;
+            this.FirstNameTextBox.Text = "";
             // 
-            // label8
+            // FirstName_Label
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(48, 93);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 13);
-            this.label8.TabIndex = 42;
-            this.label8.Text = "Customer Name:";
+            this.FirstName_Label.AutoSize = true;
+            this.FirstName_Label.Location = new System.Drawing.Point(69, 109);
+            this.FirstName_Label.Name = "FirstName_Label";
+            this.FirstName_Label.Size = new System.Drawing.Size(60, 13);
+            this.FirstName_Label.TabIndex = 42;
+            this.FirstName_Label.Text = "First Name:";
             // 
             // EnterButton
             // 
@@ -305,6 +280,7 @@
             this.EnterButton.TabIndex = 41;
             this.EnterButton.Text = "Enter";
             this.EnterButton.UseVisualStyleBackColor = false;
+            this.EnterButton.Click += new System.EventHandler(this.EnterButton_Click);
             // 
             // EnterCustomerIDTextBox
             // 
@@ -314,53 +290,78 @@
             this.EnterCustomerIDTextBox.TabIndex = 40;
             this.EnterCustomerIDTextBox.Text = "";
             // 
-            // label9
+            // EnterCustomerID_Label
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(127, 25);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(96, 13);
-            this.label9.TabIndex = 39;
-            this.label9.Text = "Enter Customer ID:";
+            this.EnterCustomerID_Label.AutoSize = true;
+            this.EnterCustomerID_Label.Location = new System.Drawing.Point(127, 25);
+            this.EnterCustomerID_Label.Name = "EnterCustomerID_Label";
+            this.EnterCustomerID_Label.Size = new System.Drawing.Size(96, 13);
+            this.EnterCustomerID_Label.TabIndex = 39;
+            this.EnterCustomerID_Label.Text = "Enter Customer ID:";
             // 
             // UpdateDatabaseButton
             // 
             this.UpdateDatabaseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.UpdateDatabaseButton.Location = new System.Drawing.Point(186, 548);
+            this.UpdateDatabaseButton.Location = new System.Drawing.Point(384, 445);
             this.UpdateDatabaseButton.Name = "UpdateDatabaseButton";
             this.UpdateDatabaseButton.Size = new System.Drawing.Size(157, 41);
             this.UpdateDatabaseButton.TabIndex = 60;
             this.UpdateDatabaseButton.Text = "Update Database";
             this.UpdateDatabaseButton.UseVisualStyleBackColor = false;
             // 
+            // CardIssuerComboBox
+            // 
+            this.CardIssuerComboBox.FormattingEnabled = true;
+            this.CardIssuerComboBox.Location = new System.Drawing.Point(598, 109);
+            this.CardIssuerComboBox.Name = "CardIssuerComboBox";
+            this.CardIssuerComboBox.Size = new System.Drawing.Size(294, 21);
+            this.CardIssuerComboBox.TabIndex = 61;
+            // 
+            // LastName_Label
+            // 
+            this.LastName_Label.AutoSize = true;
+            this.LastName_Label.Location = new System.Drawing.Point(74, 165);
+            this.LastName_Label.Name = "LastName_Label";
+            this.LastName_Label.Size = new System.Drawing.Size(61, 13);
+            this.LastName_Label.TabIndex = 62;
+            this.LastName_Label.Text = "Last Name:";
+            // 
+            // LastNameTextBox
+            // 
+            this.LastNameTextBox.Location = new System.Drawing.Point(140, 162);
+            this.LastNameTextBox.Name = "LastNameTextBox";
+            this.LastNameTextBox.Size = new System.Drawing.Size(292, 32);
+            this.LastNameTextBox.TabIndex = 63;
+            this.LastNameTextBox.Text = "";
+            // 
             // UpdateCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(944, 626);
+            this.ClientSize = new System.Drawing.Size(944, 528);
+            this.Controls.Add(this.LastNameTextBox);
+            this.Controls.Add(this.LastName_Label);
+            this.Controls.Add(this.CardIssuerComboBox);
             this.Controls.Add(this.UpdateDatabaseButton);
-            this.Controls.Add(this.AssociatedOrderNumbersLabel);
-            this.Controls.Add(this.AssociatedOrderNumbersDataGridView);
             this.Controls.Add(this.SecurityCodeTextBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.CardIssuerTextBox);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.SecurityCode_Label);
+            this.Controls.Add(this.CreditCardNumberTextBox);
+            this.Controls.Add(this.CreditCardNumber_Label);
+            this.Controls.Add(this.CardIssuer_Label);
             this.Controls.Add(this.BillingAddressTextBox);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.BillingAddress_Label);
             this.Controls.Add(this.MailingAddressTextBox);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.MailingAddress_Label);
             this.Controls.Add(this.EmailAddressTextBox);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.EmailAddress_Label);
             this.Controls.Add(this.PhoneNumberTextBox);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.CustomerNameTextBox);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.PhoneNumber_Label);
+            this.Controls.Add(this.FirstNameTextBox);
+            this.Controls.Add(this.FirstName_Label);
             this.Controls.Add(this.EnterButton);
             this.Controls.Add(this.EnterCustomerIDTextBox);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.EnterCustomerID_Label);
             this.Controls.Add(this.SecurityCodeLabel);
             this.Controls.Add(this.CreditCardNumberLabel);
             this.Controls.Add(this.CardIssuerLabel);
@@ -372,7 +373,6 @@
             this.Controls.Add(this.EnterCustomerIDLabel);
             this.Name = "UpdateCustomerForm";
             this.Text = "Update Customer Form";
-            ((System.ComponentModel.ISupportInitialize)(this.AssociatedOrderNumbersDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,27 +389,27 @@
         private System.Windows.Forms.Label PhoneNumberLabel;
         private System.Windows.Forms.Label CustomerNameLabel;
         private System.Windows.Forms.Label EnterCustomerIDLabel;
-        private System.Windows.Forms.Label AssociatedOrderNumbersLabel;
-        private System.Windows.Forms.DataGridView AssociatedOrderNumbersDataGridView;
         private System.Windows.Forms.RichTextBox SecurityCodeTextBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox CardIssuerTextBox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label SecurityCode_Label;
+        private System.Windows.Forms.RichTextBox CreditCardNumberTextBox;
+        private System.Windows.Forms.Label CreditCardNumber_Label;
+        private System.Windows.Forms.Label CardIssuer_Label;
         private System.Windows.Forms.RichTextBox BillingAddressTextBox;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label BillingAddress_Label;
         private System.Windows.Forms.RichTextBox MailingAddressTextBox;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label MailingAddress_Label;
         private System.Windows.Forms.RichTextBox EmailAddressTextBox;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label EmailAddress_Label;
         private System.Windows.Forms.RichTextBox PhoneNumberTextBox;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RichTextBox CustomerNameTextBox;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label PhoneNumber_Label;
+        private System.Windows.Forms.RichTextBox FirstNameTextBox;
+        private System.Windows.Forms.Label FirstName_Label;
         private System.Windows.Forms.Button EnterButton;
         private System.Windows.Forms.RichTextBox EnterCustomerIDTextBox;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label EnterCustomerID_Label;
         private System.Windows.Forms.Button UpdateDatabaseButton;
+        private System.Windows.Forms.ComboBox CardIssuerComboBox;
+        private System.Windows.Forms.Label LastName_Label;
+        private System.Windows.Forms.RichTextBox LastNameTextBox;
     }
 }

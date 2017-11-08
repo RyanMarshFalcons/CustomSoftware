@@ -160,6 +160,7 @@ namespace Dvd.UI
         private void LoadDVDData()
         {
             FormDVD.Title = TitleTextBox.Text;
+            FormDVD.Genre = (MovieGenre)GenreComboBox.SelectedIndex;
             FormDVD.QuantityInStock = int.Parse(QuantityTextBox.Text);
             FormDVD.SalesPrice = decimal.Parse(SalesPriceTextBox.Text);
             FormDVD.PurchasePrice = decimal.Parse(PurchasePriceTextBox.Text);
