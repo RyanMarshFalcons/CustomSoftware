@@ -124,7 +124,7 @@ namespace Dvd.UI
                 }
                 catch (Exception ex)
                 {
-                    var message = $"A problem happened when adding the customer. {ex.Message}";
+                    var message = $"A problem happened when adding the DVD. {ex.Message}";
                     var caption = "Processing Error";
                     var result = MessageBox.Show(message, caption,
                                                  MessageBoxButtons.OK,

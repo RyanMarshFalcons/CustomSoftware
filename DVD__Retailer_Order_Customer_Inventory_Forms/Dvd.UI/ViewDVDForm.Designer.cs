@@ -84,7 +84,7 @@
             // 
             this.TitleTextBox.Location = new System.Drawing.Point(115, 102);
             this.TitleTextBox.Name = "TitleTextBox";
-            this.TitleTextBox.Size = new System.Drawing.Size(488, 34);
+            this.TitleTextBox.Size = new System.Drawing.Size(427, 34);
             this.TitleTextBox.TabIndex = 4;
             this.TitleTextBox.Text = "";
             // 
@@ -101,7 +101,7 @@
             // 
             this.GenreTextBox.Location = new System.Drawing.Point(115, 165);
             this.GenreTextBox.Name = "GenreTextBox";
-            this.GenreTextBox.Size = new System.Drawing.Size(488, 37);
+            this.GenreTextBox.Size = new System.Drawing.Size(427, 37);
             this.GenreTextBox.TabIndex = 6;
             this.GenreTextBox.Text = "";
             // 
@@ -118,7 +118,7 @@
             // 
             this.QuantityInStockTextBox.Location = new System.Drawing.Point(115, 232);
             this.QuantityInStockTextBox.Name = "QuantityInStockTextBox";
-            this.QuantityInStockTextBox.Size = new System.Drawing.Size(488, 42);
+            this.QuantityInStockTextBox.Size = new System.Drawing.Size(427, 42);
             this.QuantityInStockTextBox.TabIndex = 8;
             this.QuantityInStockTextBox.Text = "";
             // 
@@ -135,7 +135,7 @@
             // 
             this.SalesPriceTextBox.Location = new System.Drawing.Point(115, 299);
             this.SalesPriceTextBox.Name = "SalesPriceTextBox";
-            this.SalesPriceTextBox.Size = new System.Drawing.Size(488, 44);
+            this.SalesPriceTextBox.Size = new System.Drawing.Size(427, 42);
             this.SalesPriceTextBox.TabIndex = 10;
             this.SalesPriceTextBox.Text = "";
             // 
@@ -152,7 +152,7 @@
             // 
             this.PurchasePriceTextBox.Location = new System.Drawing.Point(115, 368);
             this.PurchasePriceTextBox.Name = "PurchasePriceTextBox";
-            this.PurchasePriceTextBox.Size = new System.Drawing.Size(488, 46);
+            this.PurchasePriceTextBox.Size = new System.Drawing.Size(427, 41);
             this.PurchasePriceTextBox.TabIndex = 12;
             this.PurchasePriceTextBox.Text = "";
             // 
@@ -161,7 +161,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(861, 455);
+            this.ClientSize = new System.Drawing.Size(806, 455);
             this.Controls.Add(this.PurchasePriceTextBox);
             this.Controls.Add(this.PurchasePriceLabel);
             this.Controls.Add(this.SalesPriceTextBox);

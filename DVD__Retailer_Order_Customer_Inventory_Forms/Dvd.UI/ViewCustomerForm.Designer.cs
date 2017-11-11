@@ -47,15 +47,12 @@
             this.CreditCardNumberTextBox = new System.Windows.Forms.RichTextBox();
             this.SecurityCodeLabel = new System.Windows.Forms.Label();
             this.SecurityCodeTextBox = new System.Windows.Forms.RichTextBox();
-            this.AssociatedOrderNumbersDataGridView = new System.Windows.Forms.DataGridView();
-            this.AssociatedOrderNumbersLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.AssociatedOrderNumbersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // EnterCustomerIDLabel
             // 
             this.EnterCustomerIDLabel.AutoSize = true;
-            this.EnterCustomerIDLabel.Location = new System.Drawing.Point(116, 31);
+            this.EnterCustomerIDLabel.Location = new System.Drawing.Point(214, 21);
             this.EnterCustomerIDLabel.Name = "EnterCustomerIDLabel";
             this.EnterCustomerIDLabel.Size = new System.Drawing.Size(96, 13);
             this.EnterCustomerIDLabel.TabIndex = 0;
@@ -63,7 +60,7 @@
             // 
             // EnterCustomerIDTextBox
             // 
-            this.EnterCustomerIDTextBox.Location = new System.Drawing.Point(218, 31);
+            this.EnterCustomerIDTextBox.Location = new System.Drawing.Point(316, 21);
             this.EnterCustomerIDTextBox.Name = "EnterCustomerIDTextBox";
             this.EnterCustomerIDTextBox.Size = new System.Drawing.Size(347, 25);
             this.EnterCustomerIDTextBox.TabIndex = 1;
@@ -72,7 +69,7 @@
             // EnterButton
             // 
             this.EnterButton.BackColor = System.Drawing.Color.Lime;
-            this.EnterButton.Location = new System.Drawing.Point(597, 31);
+            this.EnterButton.Location = new System.Drawing.Point(684, 21);
             this.EnterButton.Name = "EnterButton";
             this.EnterButton.Size = new System.Drawing.Size(105, 34);
             this.EnterButton.TabIndex = 2;
@@ -216,31 +213,12 @@
             this.SecurityCodeTextBox.TabIndex = 18;
             this.SecurityCodeTextBox.Text = "";
             // 
-            // AssociatedOrderNumbersDataGridView
-            // 
-            this.AssociatedOrderNumbersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AssociatedOrderNumbersDataGridView.Location = new System.Drawing.Point(443, 150);
-            this.AssociatedOrderNumbersDataGridView.Name = "AssociatedOrderNumbersDataGridView";
-            this.AssociatedOrderNumbersDataGridView.Size = new System.Drawing.Size(457, 369);
-            this.AssociatedOrderNumbersDataGridView.TabIndex = 19;
-            // 
-            // AssociatedOrderNumbersLabel
-            // 
-            this.AssociatedOrderNumbersLabel.AutoSize = true;
-            this.AssociatedOrderNumbersLabel.Location = new System.Drawing.Point(594, 134);
-            this.AssociatedOrderNumbersLabel.Name = "AssociatedOrderNumbersLabel";
-            this.AssociatedOrderNumbersLabel.Size = new System.Drawing.Size(133, 13);
-            this.AssociatedOrderNumbersLabel.TabIndex = 20;
-            this.AssociatedOrderNumbersLabel.Text = "Associated Order Numbers";
-            // 
             // ViewCustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(922, 553);
-            this.Controls.Add(this.AssociatedOrderNumbersLabel);
-            this.Controls.Add(this.AssociatedOrderNumbersDataGridView);
+            this.ClientSize = new System.Drawing.Size(818, 553);
             this.Controls.Add(this.SecurityCodeTextBox);
             this.Controls.Add(this.SecurityCodeLabel);
             this.Controls.Add(this.CreditCardNumberTextBox);
@@ -262,7 +240,6 @@
             this.Controls.Add(this.EnterCustomerIDLabel);
             this.Name = "ViewCustomerForm";
             this.Text = "View Customer Form";
-            ((System.ComponentModel.ISupportInitialize)(this.AssociatedOrderNumbersDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,7 +266,5 @@
         private System.Windows.Forms.RichTextBox CreditCardNumberTextBox;
         private System.Windows.Forms.Label SecurityCodeLabel;
         private System.Windows.Forms.RichTextBox SecurityCodeTextBox;
-        private System.Windows.Forms.DataGridView AssociatedOrderNumbersDataGridView;
-        private System.Windows.Forms.Label AssociatedOrderNumbersLabel;
     }
 }

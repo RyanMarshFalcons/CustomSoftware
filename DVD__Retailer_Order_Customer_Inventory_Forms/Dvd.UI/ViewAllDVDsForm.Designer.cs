@@ -36,26 +36,26 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 88);
+            this.dataGridView1.Location = new System.Drawing.Point(45, 58);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(919, 523);
+            this.dataGridView1.Size = new System.Drawing.Size(555, 523);
             this.dataGridView1.TabIndex = 0;
             // 
             // DVDsLabel
             // 
             this.DVDsLabel.AutoSize = true;
-            this.DVDsLabel.Location = new System.Drawing.Point(503, 72);
+            this.DVDsLabel.Location = new System.Drawing.Point(271, 42);
             this.DVDsLabel.Name = "DVDsLabel";
-            this.DVDsLabel.Size = new System.Drawing.Size(35, 13);
+            this.DVDsLabel.Size = new System.Drawing.Size(110, 13);
             this.DVDsLabel.TabIndex = 1;
-            this.DVDsLabel.Text = "DVDs";
+            this.DVDsLabel.Text = "All DVDs In Database";
             // 
             // ViewAllDVDsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1005, 668);
+            this.ClientSize = new System.Drawing.Size(636, 638);
             this.Controls.Add(this.DVDsLabel);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ViewAllDVDsForm";

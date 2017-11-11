@@ -36,15 +36,15 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(33, 83);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 83);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(906, 545);
+            this.dataGridView1.Size = new System.Drawing.Size(476, 467);
             this.dataGridView1.TabIndex = 0;
             // 
             // OrderHistoryLabel
             // 
             this.OrderHistoryLabel.AutoSize = true;
-            this.OrderHistoryLabel.Location = new System.Drawing.Point(436, 67);
+            this.OrderHistoryLabel.Location = new System.Drawing.Point(225, 67);
             this.OrderHistoryLabel.Name = "OrderHistoryLabel";
             this.OrderHistoryLabel.Size = new System.Drawing.Size(68, 13);
             this.OrderHistoryLabel.TabIndex = 1;
@@ -55,7 +55,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(972, 651);
+            this.ClientSize = new System.Drawing.Size(726, 569);
             this.Controls.Add(this.OrderHistoryLabel);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ViewAllOrdersForm";
