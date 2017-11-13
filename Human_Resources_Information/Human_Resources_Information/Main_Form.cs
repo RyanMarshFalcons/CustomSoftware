@@ -24,9 +24,33 @@ namespace Human_Resources_Information
             employeeProfilesForm.Show();
         }
 
+        private void OpenAddEmployeeForm()
+        {
+            var addEmployeeForm = new Add_Employee_Form();
+            addEmployeeForm.MdiParent = this;
+            addEmployeeForm.Show();
+        }
+
+        private void OpenRemoveEmployeeForm()
+        {
+            var removeEmployeeForm = new Remove_Employee_Form();
+            removeEmployeeForm.MdiParent = this;
+            removeEmployeeForm.Show();
+        }
+
         private void employeeProfilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenEmployeeProfilesForm();
+        }
+
+        private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenAddEmployeeForm();
+        }
+
+        private void removeEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenRemoveEmployeeForm();
         }
     }
 }

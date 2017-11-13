@@ -44,6 +44,12 @@
     <Compile Include="EmployeeStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Human_Resources_Information.Data\Human_Resources_Information.Data.csproj">
+      <Project>{dcad67e4-1be0-402f-a203-a911f7fa7b56}</Project>
+      <Name>Human_Resources_Information.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
