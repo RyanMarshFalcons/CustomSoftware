@@ -52,6 +52,12 @@
     <Compile Include="Add_Employee_Form.Designer.cs">
       <DependentUpon>Add_Employee_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee_Evaluation_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Evaluation_Form.Designer.cs">
+      <DependentUpon>Employee_Evaluation_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee_Profiles_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     </Compile>
     <EmbeddedResource Include="Add_Employee_Form.resx">
       <DependentUpon>Add_Employee_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Evaluation_Form.resx">
+      <DependentUpon>Employee_Evaluation_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee_Profiles_Form.resx">
       <DependentUpon>Employee_Profiles_Form.cs</DependentUpon>
