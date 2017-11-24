@@ -52,6 +52,12 @@
     <Compile Include="Add_Employee_Form.Designer.cs">
       <DependentUpon>Add_Employee_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Department_Transfer_Request_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Department_Transfer_Request_Form.Designer.cs">
+      <DependentUpon>Department_Transfer_Request_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee_Evaluation_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="Employee_Profiles_Form.Designer.cs">
       <DependentUpon>Employee_Profiles_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Write_Up_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Write_Up_Form.Designer.cs">
+      <DependentUpon>Employee_Write_Up_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Main_Form.cs">
       <SubType>Form</SubType>
@@ -80,6 +92,9 @@
     </Compile>
     <EmbeddedResource Include="Add_Employee_Form.resx">
       <DependentUpon>Add_Employee_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Department_Transfer_Request_Form.resx">
+      <DependentUpon>Department_Transfer_Request_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee_Evaluation_Form.resx">
       <DependentUpon>Employee_Evaluation_Form.cs</DependentUpon>
@@ -116,6 +131,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Human_Resources_Information.Business\Human_Resources_Information.Business.csproj">
+      <Project>{80ad0bf3-86a7-477e-9951-5d57e9687859}</Project>
+      <Name>Human_Resources_Information.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Human_Resources_Information.Data\Human_Resources_Information.Data.csproj">
       <Project>{dcad67e4-1be0-402f-a203-a911f7fa7b56}</Project>
       <Name>Human_Resources_Information.Data</Name>

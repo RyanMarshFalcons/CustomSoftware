@@ -16,6 +16,16 @@ namespace Human_Resources_Information.Store
             + "FROM [dbo].[Employee] "
             + "WHERE EmployeeID = @EmployeeID ";
 
+        private const string SQL_SELECT =
+            "SELECT EmployeeID, FirstName, LastName, Department, JobTitle, HireDate, "
+        + "Address, Salary, EmployeeRatingScore "
+        + "FROM [dbo].[Employee] "
+        + "WHERE IsDeleted = 0 ";
+
+
+        private const string SQL_SELECT_ROW =
+            SQL_SELECT + "AND EmployeeID = @EmployeeID ";
+
         private const string SQL_DELETE =
                "UPDATE [dbo].[Employee] "
                + "SET IsDeleted = 1 "
@@ -26,6 +36,11 @@ namespace Human_Resources_Information.Store
             + "VALUES "
             + "(@FirstName, @LastName, @Department, @JobTitle, @HireDate, @Address, @Salary); "
             + "SELECT @@IDENTITY ";
+
+        private const string SQL_UPDATE_EmployeeReview =
+                "UPDATE [dbo].[Employee] "
+                + "SET EmployeeRatingScore = @EmployeeRatingScore "
+                + "WHERE EmployeeID = @EmployeeID ";
 
         public int AddEmployee(Employee employee)
         {
@@ -76,6 +91,51 @@ namespace Human_Resources_Information.Store
                 }
             }
             return rowsAffected;
+        }
+
+        public Employee GetEmployee(int employeeID)
+        {
+            var employee = new Employee();
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                SqlCommand cmd = new SqlCommand(SQL_SELECT_ROW, conn);
+                cmd.Parameters.Add("@EmployeeID", SqlDbType.Int).Value = employeeID;
+
+                conn.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+                if (rdr.Read())
+                {
+                    AssignColumnValues(rdr, employee);
+                }
+            }
+            return employee;
+        }
+
+        public void UpdateEmployeeReview(Employee employee)
+        {
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                using (SqlCommand cmd = new SqlCommand(SQL_UPDATE_EmployeeReview, conn))
+                {
+                    cmd.Parameters.Add("@EmployeeID", SqlDbType.Int).Value = employee.EmployeeID;
+                    cmd.Parameters.Add("@EmployeeRatingScore", SqlDbType.Int, 50).Value = employee.EmployeeRatingScore;
+                    
+                    conn.Open();
+                }
+            }
+        }
+
+        private static void AssignColumnValues(SqlDataReader rdr, Employee item)
+        {
+            item.EmployeeID = (!rdr.IsDBNull(0)) ? rdr.GetInt32(0) : 0;
+            item.FirstName = (!rdr.IsDBNull(1)) ? rdr.GetString(1) : String.Empty;
+            item.LastName = (!rdr.IsDBNull(2)) ? rdr.GetString(2) : String.Empty;
+            item.Department = (!rdr.IsDBNull(3)) ? (Department)rdr.GetInt32(3) : 0;
+            item.JobTitle = (!rdr.IsDBNull(4)) ? rdr.GetString(4) : String.Empty;
+            item.HireDate = (!rdr.IsDBNull(5)) ? rdr.GetDateTime(5) : DateTime.MinValue;
+            item.Address = (!rdr.IsDBNull(6)) ? rdr.GetString(6) : String.Empty;
+            item.Salary = (!rdr.IsDBNull(7)) ? rdr.GetDecimal(7) : 0M;
+            item.EmployeeRatingScore = (!rdr.IsDBNull(8)) ? rdr.GetInt32(8) : 0;
         }
     }
 }

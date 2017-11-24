@@ -17,6 +17,7 @@ namespace Human_Resources_Information.Data
         public DateTime HireDate { get; set; }
         public string Address { get; set; }
         public decimal Salary { get; set; }
+        public int EmployeeRatingScore { get; set; }
         public bool IsDeleted { get; set; }
     }
 }

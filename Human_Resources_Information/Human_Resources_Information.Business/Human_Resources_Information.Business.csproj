@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DCAD67E4-1BE0-402F-A203-A911F7FA7B56}</ProjectGuid>
+    <ProjectGuid>{80AD0BF3-86A7-477E-9951-5D57E9687859}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Human_Resources_Information.Data</RootNamespace>
-    <AssemblyName>Human_Resources_Information.Data</AssemblyName>
+    <RootNamespace>Human_Resources_Information.Business</RootNamespace>
+    <AssemblyName>Human_Resources_Information.Business</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,9 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="EmployeeRating.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Human_Resources_Information.Data\Human_Resources_Information.Data.csproj">
+      <Project>{dcad67e4-1be0-402f-a203-a911f7fa7b56}</Project>
+      <Name>Human_Resources_Information.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

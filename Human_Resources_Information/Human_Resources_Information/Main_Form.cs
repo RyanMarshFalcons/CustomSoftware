@@ -38,6 +38,27 @@ namespace Human_Resources_Information
             removeEmployeeForm.Show();
         }
 
+        private void OpenEmployeeEvaluationForm()
+        {
+            var employeeEvaluationForm = new Employee_Evaluation_Form();
+            employeeEvaluationForm.MdiParent = this;
+            employeeEvaluationForm.Show();
+        }
+
+        private void OpenEmployeeWriteUpForm()
+        {
+            var employeeWriteUpForm = new Employee_Write_Up_Form();
+            employeeWriteUpForm.MdiParent = this;
+            employeeWriteUpForm.Show();
+        }
+
+        private void OpenDepartmentTransferReqestForm()
+        {
+            var departmentTransferRequestForm = new Department_Transfer_Request_Form();
+            departmentTransferRequestForm.MdiParent = this;
+            departmentTransferRequestForm.Show();
+        }
+
         private void employeeProfilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenEmployeeProfilesForm();
@@ -51,6 +72,21 @@ namespace Human_Resources_Information
         private void removeEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenRemoveEmployeeForm();
+        }
+
+        private void employeeEvaluationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenEmployeeEvaluationForm();
+        }
+
+        private void employeeWriteUpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenEmployeeWriteUpForm();
+        }
+
+        private void departmentTransferRequestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenDepartmentTransferReqestForm();
         }
     }
 }
