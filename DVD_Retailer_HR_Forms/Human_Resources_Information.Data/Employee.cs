@@ -18,6 +18,7 @@ namespace Human_Resources_Information.Data
         public string Address { get; set; }
         public decimal Salary { get; set; }
         public int EmployeeRatingScore { get; set; }
+        public int NumberOfWriteups { get; set; }
         public bool IsDeleted { get; set; }
     }
 }

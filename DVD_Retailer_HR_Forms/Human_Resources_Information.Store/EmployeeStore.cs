@@ -42,6 +42,17 @@ namespace Human_Resources_Information.Store
                 + "SET EmployeeRatingScore = @EmployeeRatingScore "
                 + "WHERE EmployeeID = @EmployeeID ";
 
+        private const string SQL_UPDATE_DepartmentTransfer =
+                "UPDATE [dbo].[Employee] "
+                + "SET Department = @Department "
+                + "SET JobTitle = @JobTitle "
+                + "WHERE EmployeeID = @EmployeeID ";
+
+        private const string SQL_UPDATE_WriteUp =
+                "UPDATE [dbo].[Employee] "
+                + "SET Department = @Department "
+                + "WHERE NumberOfWriteups = @NumberOfWriteups ";
+
         public int AddEmployee(Employee employee)
         {
             using (var conn = DatabaseHelper.GetConnection())
@@ -93,6 +104,8 @@ namespace Human_Resources_Information.Store
             return rowsAffected;
         }
 
+        
+
         public Employee GetEmployee(int employeeID)
         {
             var employee = new Employee();
@@ -118,8 +131,37 @@ namespace Human_Resources_Information.Store
                 using (SqlCommand cmd = new SqlCommand(SQL_UPDATE_EmployeeReview, conn))
                 {
                     cmd.Parameters.Add("@EmployeeID", SqlDbType.Int).Value = employee.EmployeeID;
+                    cmd.Parameters.Add("@Department", SqlDbType.Int, 50).Value = (int)employee.Department;
+                    cmd.Parameters.Add("@JobTitle", SqlDbType.VarChar, 50).Value = employee.JobTitle;
+
+                    conn.Open();
+                }
+            }
+        }
+
+        public void UpdateDepartmentTransfer(Employee employee)
+        {
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                using (SqlCommand cmd = new SqlCommand(SQL_UPDATE_DepartmentTransfer, conn))
+                {
+                    cmd.Parameters.Add("@EmployeeID", SqlDbType.Int).Value = employee.EmployeeID;
                     cmd.Parameters.Add("@EmployeeRatingScore", SqlDbType.Int, 50).Value = employee.EmployeeRatingScore;
-                    
+
+                    conn.Open();
+                }
+            }
+        }
+
+        public void UpdateWriteUp(Employee employee)
+        {
+            using (var conn = DatabaseHelper.GetConnection())
+            {
+                using (SqlCommand cmd = new SqlCommand(SQL_UPDATE_WriteUp, conn))
+                {
+                    cmd.Parameters.Add("@EmployeeID", SqlDbType.Int).Value = employee.EmployeeID;
+                    cmd.Parameters.Add("@NumberOfWriteups", SqlDbType.Int, 50).Value = employee.NumberOfWriteups;
+
                     conn.Open();
                 }
             }

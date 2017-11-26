@@ -102,6 +102,9 @@
     <EmbeddedResource Include="Employee_Profiles_Form.resx">
       <DependentUpon>Employee_Profiles_Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Write_Up_Form.resx">
+      <DependentUpon>Employee_Write_Up_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>
     </EmbeddedResource>

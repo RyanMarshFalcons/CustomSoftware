@@ -37,7 +37,7 @@
             this.NewJobTitleLabel = new System.Windows.Forms.Label();
             this.NewJobTitleTextBox = new System.Windows.Forms.TextBox();
             this.ReasonForTransferLabel = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.ReasonForTransferTextBox = new System.Windows.Forms.RichTextBox();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -60,7 +60,7 @@
             // NameOFApproverLabel
             // 
             this.NameOFApproverLabel.AutoSize = true;
-            this.NameOFApproverLabel.Location = new System.Drawing.Point(16, 76);
+            this.NameOFApproverLabel.Location = new System.Drawing.Point(13, 76);
             this.NameOFApproverLabel.Name = "NameOFApproverLabel";
             this.NameOFApproverLabel.Size = new System.Drawing.Size(95, 13);
             this.NameOFApproverLabel.TabIndex = 2;
@@ -76,7 +76,7 @@
             // NewDepartmentLabel
             // 
             this.NewDepartmentLabel.AutoSize = true;
-            this.NewDepartmentLabel.Location = new System.Drawing.Point(16, 128);
+            this.NewDepartmentLabel.Location = new System.Drawing.Point(16, 129);
             this.NewDepartmentLabel.Name = "NewDepartmentLabel";
             this.NewDepartmentLabel.Size = new System.Drawing.Size(87, 13);
             this.NewDepartmentLabel.TabIndex = 4;
@@ -93,7 +93,7 @@
             // NewJobTitleLabel
             // 
             this.NewJobTitleLabel.AutoSize = true;
-            this.NewJobTitleLabel.Location = new System.Drawing.Point(19, 305);
+            this.NewJobTitleLabel.Location = new System.Drawing.Point(13, 306);
             this.NewJobTitleLabel.Name = "NewJobTitleLabel";
             this.NewJobTitleLabel.Size = new System.Drawing.Size(72, 13);
             this.NewJobTitleLabel.TabIndex = 6;
@@ -115,13 +115,13 @@
             this.ReasonForTransferLabel.TabIndex = 8;
             this.ReasonForTransferLabel.Text = "Reason For Transfer";
             // 
-            // richTextBox1
+            // ReasonForTransferTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(468, 39);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(411, 254);
-            this.richTextBox1.TabIndex = 10;
-            this.richTextBox1.Text = "";
+            this.ReasonForTransferTextBox.Location = new System.Drawing.Point(468, 39);
+            this.ReasonForTransferTextBox.Name = "ReasonForTransferTextBox";
+            this.ReasonForTransferTextBox.Size = new System.Drawing.Size(411, 254);
+            this.ReasonForTransferTextBox.TabIndex = 10;
+            this.ReasonForTransferTextBox.Text = "";
             // 
             // SubmitButton
             // 
@@ -132,6 +132,7 @@
             this.SubmitButton.TabIndex = 11;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = false;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // Department_Transfer_Request_Form
             // 
@@ -140,7 +141,7 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(891, 358);
             this.Controls.Add(this.SubmitButton);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.ReasonForTransferTextBox);
             this.Controls.Add(this.ReasonForTransferLabel);
             this.Controls.Add(this.NewJobTitleTextBox);
             this.Controls.Add(this.NewJobTitleLabel);
@@ -152,6 +153,7 @@
             this.Controls.Add(this.EmployeeIDLabel);
             this.Name = "Department_Transfer_Request_Form";
             this.Text = "Department_Transfer_Request_Form";
+            this.Load += new System.EventHandler(this.Employee_Evaluation_Form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,7 +170,7 @@
         private System.Windows.Forms.Label NewJobTitleLabel;
         private System.Windows.Forms.TextBox NewJobTitleTextBox;
         private System.Windows.Forms.Label ReasonForTransferLabel;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox ReasonForTransferTextBox;
         private System.Windows.Forms.Button SubmitButton;
     }
 }
